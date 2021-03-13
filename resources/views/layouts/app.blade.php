@@ -1,3 +1,9 @@
+<?php 
+use App\Http\Controllers\ControllerStatics;
+$dia_semana = ControllerStatics::converterDiaSemana(date('N'));
+$mes = ControllerStatics::converteMes(date('m'));
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,13 +64,13 @@
           <div class="header_top">
             <div class="header_top_left">
               <ul class="top_nav">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="home.html">Principal</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Login</a></li>
               </ul>
             </div>
             <div class="header_top_right">
-              <p>Friday, December 05, 2014</p>
+              <p>{{$dia_semana}}, {{$mes}} {{date('d')}}, {{date('Y')}}</p>
             </div>
           </div>
         </div>
@@ -101,22 +107,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav main_nav">
-            <li class="active"><a href="home.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
-            <li><a href="#">Technology</a></li>            
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile</a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Android</a></li>
-                <li><a href="#">Samsung</a></li>
-                <li><a href="#">Nokia</a></li>
-                <li><a href="#">Walton Mobile</a></li>
-                <li><a href="#">Sympony</a></li>               
-              </ul>
-            </li>
-            <li><a href="#">Laptops</a></li> 
-            <li><a href="#">Tablets</a></li> 
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="404.html">404 Page</a></li>
+            <li class="active"><a href="home.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
+            <li><a href="#">Política</a></li>   
+            <li><a href="#">Tecnologia</a></li> 
+            <li><a href="#">Desporto</a></li> 
+            <li><a href="contact.html">Contactar</a></li>
           </ul>           
         </div><!--/.nav-collapse -->      
       </nav>
