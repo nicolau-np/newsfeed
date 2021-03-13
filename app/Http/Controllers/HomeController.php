@@ -15,11 +15,11 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            'title'=>"Home",
-            'menu'=>"Home",
-            'submenu'=>null,
-            'type'=>"home",
-            
+            'title' => "NewsFeed",
+            'menu' => "Home",
+            'submenu' => null,
+            'type' => "home",
+
         ];
         return view('home', $data);
     }

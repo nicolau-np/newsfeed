@@ -23,18 +23,18 @@
     <!-- for fancybox slider -->
      <link href="{{asset('assets/css/jquery.fancybox.css')}}" rel="stylesheet">    
     <!-- website theme file -->
-    <!-- <link href="{{asset('assets/css/theme-red.css')}}" rel="stylesheet"> -->
+    <!-- <link href="css/theme-red.css" rel="stylesheet"> -->
  
      <link href="{{asset('assets/css/theme.css')}}" rel="stylesheet">
     <!-- main site css file -->    
-    <link href="{{asset('style.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/style.css')}}" rel="stylesheet">
  
 
-    <!-- HTML5 shim and Respond.js')}} for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 <body>
@@ -73,7 +73,7 @@
             <div class="logo_area">
               <!-- for your img logo format
               <a href="home.html" class="logo">
-                <img src="{{asset('assets/img/logo.jpg')}}" alt="logo">
+                <img src="" alt="logo">
               </a> -->
               <!-- for your text logo format -->
                <a href="#" class="logo">
@@ -779,7 +779,7 @@
   
 
   <!-- jQuery Library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')}}"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <!-- For content animatin  -->
   <script src="{{asset('assets/js/wow.min.js')}}"></script>
   <!-- bootstrap js file -->

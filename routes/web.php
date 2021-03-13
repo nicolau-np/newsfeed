@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "HomeController@index");
 
-Route::groupe(['prefix'=>"admin", 'middleware'=>"auth"], function(){
+/*Route::groupe(['prefix'=>"admin", 'middleware'=>"auth"], function(){
     
-});
+});*/
