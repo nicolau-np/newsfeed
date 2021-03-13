@@ -1,0 +1,19 @@
+{
+    "saudacao":"Hello world",
+    
+    "principal":"Home",
+    "esperiências": "Experiences",
+    "notícias":"News",
+    "sobre":"About",
+    "contactar":"Contact us",
+
+    "gps":"GPS",
+    "Hotéis":"Hotels",
+    "Restaurantes":"Restaurants",
+    "Campismo":"Camping",
+    "Guia Turístico":"Tourist guide",
+    "Actividades":"Activities",
+    "descobrir":"discover",
+
+    "explorar agora":"Explore now"
+}

@@ -1,0 +1,19 @@
+{ 
+    "saudacao":"Ola mundo",
+
+    "principal":"Principal",
+    "esperiências": "Esperiências",
+    "notícias":"Notícias",
+    "sobre":"Sobre",
+    "contactar":"Contactar",
+
+    "gps":"GPS",
+    "Hotéis":"Hotéis",
+    "Restaurantes":"Restaurantes",
+    "Campismo":"Campismo",
+    "Guia Turístico":"Guia Turístico",
+    "Actividades":"Actividades",
+    "descobrir":"descobrir",
+
+    "explorar agora":"Explorar agora"
+}
