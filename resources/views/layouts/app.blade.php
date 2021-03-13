@@ -83,7 +83,7 @@ $mes = ControllerStatics::converteMes(date('m'));
               </a> -->
               <!-- for your text logo format -->
                <a href="#" class="logo">
-                News <span>Feed</span>
+                Angola <span>News</span>
               </a> 
             </div>
             <div class="add_banner">
@@ -122,7 +122,7 @@ $mes = ControllerStatics::converteMes(date('m'));
         <div class="col-lg-12 col-md-12">
            <!-- start news sticker -->
           <div class="latest_newsarea">      
-            <span>Latest News</span>
+            <span>Últimas notícias</span>
             <ul id="ticker01" class="news_sticker">
               <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My First News Item</a></li> 
               <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Second News Item</a></li>
@@ -189,7 +189,7 @@ $mes = ControllerStatics::converteMes(date('m'));
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="latest_post">
-            <h2><span>Latest post</span></h2>
+            <h2><span>Útimas publicações</span></h2>
             <div class="latest_post_container">
               <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
               <ul class="latest_postnav">
@@ -260,7 +260,7 @@ $mes = ControllerStatics::converteMes(date('m'));
         <div class="col-lg-8 col-md-8 col-sm-8">
           <div class="left_content">
             <div class="single_post_content">
-              <h2><span>Business</span></h2>
+              <h2><span>Negócios</span></h2>
               <div class="single_post_content_left">
                 <ul class="business_catgnav  wow fadeInDown">
                   <li>
@@ -326,7 +326,7 @@ $mes = ControllerStatics::converteMes(date('m'));
             <div class="fashion_technology_area">
               <div class="fashion">
                 <div class="single_post_content">
-                  <h2><span>Fashion</span></h2>              
+                  <h2><span>Moda</span></h2>              
                   <ul class="business_catgnav wow fadeInDown">
                     <li>
                       <figure class="bsbig_fig">
@@ -387,7 +387,7 @@ $mes = ControllerStatics::converteMes(date('m'));
               </div>
               <div class="technology">
                 <div class="single_post_content">
-                  <h2><span>Technology</span></h2>              
+                  <h2><span>Tecnologia</span></h2>              
                   <ul class="business_catgnav">
                     <li>
                       <figure class="bsbig_fig wow fadeInDown">
@@ -450,7 +450,7 @@ $mes = ControllerStatics::converteMes(date('m'));
             <!-- End 2 style category design -->
             <!-- start photography stye design -->
             <div class="single_post_content">
-              <h2><span>Photography</span></h2>
+              <h2><span>Galeria</span></h2>
               <ul class="photograph_nav  wow fadeInDown">                
                 <li>
                   <div class="photo_grid">
@@ -510,7 +510,7 @@ $mes = ControllerStatics::converteMes(date('m'));
             <!-- End photography stye design -->
             <!-- start games category design -->
             <div class="single_post_content">
-              <h2><span>Games</span></h2>
+              <h2><span>Jogos</span></h2>
               <div class="single_post_content_left">
                 <ul class="business_catgnav">
                   <li>
@@ -578,7 +578,7 @@ $mes = ControllerStatics::converteMes(date('m'));
         <div class="col-lg-4 col-md-4 col-sm-4">
           <aside class="right_content">
             <div class="single_sidebar">
-              <h2><span>Popular Post</span></h2>
+              <h2><span>Publicações populares</span></h2>
               <ul class="spost_nav">
                 <li>
                   <div class="media wow fadeInDown">
@@ -633,13 +633,13 @@ $mes = ControllerStatics::converteMes(date('m'));
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="category">
                   <ul>
-                    <li class="cat-item"><a href="#">Sports</a></li>
-                    <li class="cat-item"><a href="#">Fashion</a></li>
-                    <li class="cat-item"><a href="#">Business</a></li>
-                    <li class="cat-item"><a href="#">Technology</a></li>
-                    <li class="cat-item"><a href="#">Games</a></li>
-                    <li class="cat-item"><a href="#">Life & Style</a></li>
-                    <li class="cat-item"><a href="#">Photography</a></li>
+                    <li class="cat-item"><a href="#">Desporto</a></li>
+                    <li class="cat-item"><a href="#">Moda</a></li>
+                    <li class="cat-item"><a href="#">Negócios</a></li>
+                    <li class="cat-item"><a href="#">Tecnologia</a></li>
+                    <li class="cat-item"><a href="#">Jogos</a></li>
+                    <li class="cat-item"><a href="#">Estilo de Vida</a></li>
+                    <li class="cat-item"><a href="#">Galeria</a></li>
                   </ul>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="video">
@@ -696,19 +696,19 @@ $mes = ControllerStatics::converteMes(date('m'));
             <!-- End tab section -->
             <!-- sponsor add -->
             <div class="single_sidebar wow fadeInDown">
-              <h2><span>Sponsor</span></h2>
+              <h2><span>Patrocinador</span></h2>
               <a class="sideAdd" href="#"><img src="{{asset('assets/img/add_img.jpg')}}" alt="img"></a>
             </div>
             <!-- End sponsor add -->
              <!-- Category Archive -->
             <div class="single_sidebar wow fadeInDown">
-              <h2><span>Category Archive</span></h2>
+              <h2><span>Arquivo de Categoria</span></h2>
               <select class="catgArchive">
-                <option>Select Category</option>
-                <option>Life styles</option>
-                <option>Sports</option>
-                <option>Technology</option>
-                <option>Treads</option>
+                <option>Categoria</option>
+                <option>Estilo de Vida</option>
+                <option>Desporto</option>
+                <option>Tecnologia</option>
+                <option>Passos</option>
               </select>
             </div>
             <!-- End category Archive -->
@@ -719,7 +719,7 @@ $mes = ControllerStatics::converteMes(date('m'));
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Rss Feed</a></li>
                 <li><a href="#">Login</a></li>
-                <li><a href="#">Life & Style</a></li>
+                <li><a href="#">Estilo de Vida</a></li>
               </ul>
             </div>
             <!-- End sponsor add -->
@@ -733,7 +733,7 @@ $mes = ControllerStatics::converteMes(date('m'));
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="footer_widget wow fadeInLeftBig">
-              <h2>Flickr Images</h2>
+              <h2>Imagens do Flickr</h2>
                        
             </div>
           </div>
@@ -741,11 +741,11 @@ $mes = ControllerStatics::converteMes(date('m'));
             <div class="footer_widget wow fadeInDown">
               <h2>Tag</h2>
               <ul class="tag_nav">
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Life & Style</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Desportos</a></li>
+                <li><a href="#">Moda</a></li>
+                <li><a href="#">Negócios</a></li>
+                <li><a href="#">Estilo de Vida</a></li>
                 <li><a href="#">Technology</a></li>
                 <li><a href="#">Photo</a></li>
                 <li><a href="#">Slider</a></li>
@@ -754,10 +754,10 @@ $mes = ControllerStatics::converteMes(date('m'));
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="footer_widget wow fadeInRightBig">
-              <h2>Contact</h2>
+              <h2>Contactar</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               <address>
-                Perfect News,1238 S . 123 St.Suite 25 Town City 3333,USA Phone: 123-326-789 Fax: 123-546-567 
+                Bairro Helder Neto . Lubango Huíla, ANGOLA Telefone: 946-216-795 
               </address>              
             </div>
           </div>
@@ -765,9 +765,9 @@ $mes = ControllerStatics::converteMes(date('m'));
       </div>       
       <div class="footer_bottom">
         <p class="copyright">
-          All Rights Reserved <a href="home.html">NewsFeed</a>
+          Todos os direitos reservados <a href="/">Notícias</a>
         </p>
-        <p class="developer">Developed By <a href="http://wpfreeware.com" rel="nofollow">Wpfreeware</a></p>
+        <p class="developer">Developed By <a href="#" rel="nofollow">Nicolau NP</a></p>
       </div>    
     </footer>
   </div> <!-- /.container -->
