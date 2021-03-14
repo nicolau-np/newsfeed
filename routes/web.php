@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index");
 Route::get('/contact', "HomeController@contact");
 
+Route::get('/login', "UserController@login")->name('login');
+Route::post('/logar', "UserController@logar")->name('logar');
+
 /*Route::groupe(['prefix'=>"admin", 'middleware'=>"auth"], function(){
     
 });*/

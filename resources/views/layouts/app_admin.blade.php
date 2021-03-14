@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{asset('assets/img/maisfibras.png')}}" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="{{asset('assets/img/maisfibras.png')}}" />
+    <link rel="shortcut icon" href="{{asset('assets/img/logonews.png')}}" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="{{asset('assets/img/logonews.png')}}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{{asset('assets/css/style_form.css')}}">
 <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.css')}}">
 <title>{{$title}}</title>
+
 </head>
 <body>
     <div class="container">

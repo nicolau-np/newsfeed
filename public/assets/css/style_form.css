@@ -1,0 +1,30 @@
+fieldset {
+    background-color: #eeeeee;
+    
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+
+  fieldset .row{
+    padding: 15px;
+  }
+
+  .form_login{
+      margin-left:20%;
+      margin-right:20%;
+      margin-top:15%;
+  }
+  
+  @media (max-width:700px){
+      .form_login{
+          margin: 0%;
+      }
+      .container{
+          padding: 0%;
+      }
+  }
