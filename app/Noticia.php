@@ -14,14 +14,12 @@ class Noticia extends Model
         'min_description',
         'description',
         'imagem',
+        'view',
         'estado',
     ];
 
-    public function categoria(){
+    public function categoria()
+    {
         return $this->belongsTo(Categoria::class, 'id_categoria', 'id');
-    }
-
-    public function visualizacao(){
-        return $this->hasMany(Visualizacoes::class, 'id_noticia', 'id');
     }
 }

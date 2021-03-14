@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Noticia;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,12 +15,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $getNegocios = Noticia::whereHas('categoria', function($query){
+            $query->where('categoria', "Negocios");
+        })->limit(4)->get()->sortByDesc('id');
+
         $data = [
             'title' => "angoNews",
             'menu' => "Home",
             'submenu' => null,
             'type' => "home",
-
+            'getNegocios'=>$getNegocios,
         ];
         return view('home', $data);
     }

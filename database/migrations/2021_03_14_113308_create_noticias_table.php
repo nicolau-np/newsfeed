@@ -21,6 +21,7 @@ class CreateNoticiasTable extends Migration
             $table->string('min_description');
             $table->text('description');
             $table->text('imagem');
+            $table->bigInteger('view');
             $table->string('estado');
             $table->timestamps();
         });
