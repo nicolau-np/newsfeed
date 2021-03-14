@@ -29,9 +29,9 @@ $mes = ControllerStatics::converteMes(date('m'));
     <!-- for fancybox slider -->
      <link href="{{asset('assets/css/jquery.fancybox.css')}}" rel="stylesheet">    
     <!-- website theme file -->
-    <!-- <link href="css/theme-red.css" rel="stylesheet"> -->
+    <link href="{{asset('assets/css/theme-red.css')}}" rel="stylesheet">
  
-     <link href="{{asset('assets/css/theme.css')}}" rel="stylesheet">
+     <!-- <link href="theme.css" rel="stylesheet"> -->
     <!-- main site css file -->    
     <link href="{{asset('assets/style.css')}}" rel="stylesheet">
  
@@ -87,7 +87,7 @@ $mes = ControllerStatics::converteMes(date('m'));
               </a> 
             </div>
             <div class="add_banner">
-              <a href="#"><img src="{{asset('assets/img/addbanner_728x90_V1.jpg')}}" alt="img"></a>
+              <a href="#"><img src="https://news.bitcoin.com/wp-content/uploads/2017/01/Standard-Cashback-Banner-728x90-GIF.gif" alt="img"></a>
             </div>
           </div>
         </div>

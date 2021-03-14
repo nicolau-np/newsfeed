@@ -6,11 +6,11 @@
         <div class="left_content">
         <!-- start error page -->
           <div class="error_page">
-            <h3>We Are Sorry</h3>
+            <h3>Nos desculpe</h3>
             <h1>404</h1>
-            <p>Unfortunately, the page you were looking for could not be found. It may be temporarily unavailable, moved or no longer exists</p>
+            <p>Infelizmente, a página que você estava procurando não foi encontrada. Pode estar temporariamente indisponível, movido ou não existe mais</p>
             <span></span>
-            <a href="/" class="wow fadeInLeftBig">Go to home page</a>
+            <a href="/" class="wow fadeInLeftBig">Vá para a página inicial</a>
           </div> 
           <!-- End error page -->           
         </div>

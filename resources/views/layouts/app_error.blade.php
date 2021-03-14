@@ -9,7 +9,14 @@ $mes = ControllerStatics::converteMes(date('m'));
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NewsFeed</title>
+    
+    <meta name="description" content="Angola News">
+	<meta name="keywords" content="Angola News, fique actualizado das novas notícias">
+	<meta name="author" content="Nicolau NP">
+	<title>NewsFeed</title>
+	<link rel="shortcut icon" href="{{asset('assets/img/logonews.png')}}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{asset('assets/img/logonews.png')}}" />
+    
 
         <!-- Bootstrap -->
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -28,9 +35,9 @@ $mes = ControllerStatics::converteMes(date('m'));
         <!-- for fancybox slider -->
          <link href="{{asset('assets/css/jquery.fancybox.css')}}" rel="stylesheet">    
         <!-- website theme file -->
-        <!-- <link href="css/theme-red.css" rel="stylesheet"> -->
+        <link href="{{asset('assets/css/theme-red.css')}}" rel="stylesheet"> 
      
-         <link href="{{asset('assets/css/theme.css')}}" rel="stylesheet">
+         <!-- <link href="css/theme.css" rel="stylesheet">-->
         <!-- main site css file -->    
         <link href="{{asset('assets/style.css')}}" rel="stylesheet">
 
@@ -85,7 +92,7 @@ $mes = ControllerStatics::converteMes(date('m'));
                 </a> 
               </div>
               <div class="add_banner">
-                <a href="#"><img src="{{asset('assets/img/addbanner_728x90_V1.jpg')}}" alt="img"></a>
+                <a href="#"><img src="https://news.bitcoin.com/wp-content/uploads/2017/01/Standard-Cashback-Banner-728x90-GIF.gif" alt="img"></a>
               </div>
             </div>
           </div>
