@@ -14,7 +14,12 @@ class CreatePostPublicitariosTable extends Migration
     public function up()
     {
         Schema::create('post_publicitarios', function (Blueprint $table) {
-            $table->id();
+            $table->engine = "InnoDB";
+            $table->bigIncrements('id');
+            $table->string('titulo');
+            $table->string('link');
+            $table->text('linkImg');
+            $table->string('estado');
             $table->timestamps();
         });
     }

@@ -14,8 +14,15 @@ class CreateVisualizacoesTable extends Migration
     public function up()
     {
         Schema::create('visualizacoes', function (Blueprint $table) {
-            $table->id();
+            $table->engine = "InnoDB";
+            $table->bigIncrements('id');
+            $table->bigInteger('id_noticia')->index()->unsigned();
+            $table->bigInteger('value');
             $table->timestamps();
+        });
+
+        Schema::table('visualizacoes', function (Blueprint $table) {
+            $table->foreign('id_noticia')->references('id')->on('noticias')->onUpdate('cascade');
         });
     }
 
