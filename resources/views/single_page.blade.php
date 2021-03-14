@@ -42,36 +42,20 @@
                 <div class="related_post">
                   <h2>Publicações Relacionadas <i class="fa fa-thumbs-o-up"></i></h2>
                   <ul class="spost_nav wow fadeInDown animated">
-                    <li>
+                    @foreach ($getNoticiasRelacionadas as $relacionadas)
+                        <li>
                       <div class="media">
-                        <a class="media-left" href="single_page.html">
-                          <img src="{{asset('assets/img/post_img1.jpg')}}" alt="img">
+                      <a class="media-left" href="/single_page/{{$relacionadas->id}}">
+                        <img src="{{asset($relacionadas->imagem)}}" alt="{{$relacionadas->title}}">
                         </a>
                         <div class="media-body">
-                          <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a>                        
+                          <a class="catg_title" href="/single_page/{{$relacionadas->id}}">{{$relacionadas->title}}</a>                        
                         </div>
                       </div>
                     </li>
-                     <li>
-                      <div class="media">
-                        <a class="media-left" href="single_page.html">
-                          <img src="{{asset('assets/img/post_img2.jpg')}}" alt="img">
-                        </a>
-                        <div class="media-body">
-                          <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a>                                
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <a class="media-left" href="single_page.html">
-                          <img src="{{asset('assets/img/post_img1.jpg')}}" alt="img">
-                        </a>
-                        <div class="media-body">
-                          <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a>                               
-                        </div>
-                      </div>
-                    </li>               
+                    @endforeach
+                    
+
                   </ul>
                 </div>
               </div>            
@@ -156,11 +140,7 @@
                         @endforeach
                     </ul>
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="video">
-                    <div class="vide_area">                   
-                      <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </div>
+                
                  
                 </div>            
               </div>
