@@ -57,7 +57,7 @@ class UserController extends Controller
             'submenu' => "Editar",
         ];
 
-        return view('admin.perfil.edit', $data);
+        return view('admin.user.edit', $data);
     }
 
     public function update_profile(Request $request)

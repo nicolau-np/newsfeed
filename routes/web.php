@@ -37,4 +37,9 @@ Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
       Route::get('/edit/{id_noticia}', "PostPublicitarioController@edit");
       Route::put('/update/{id_noticia}', "PostPublicitarioController@update");
    });
+
+   Route::group(['prefix'=>"usuario", 'middleware'=>"auth"], function(){
+      Route::get('/edit', "UserController@edit_profile");
+      Route::post('/update', "UserController@update_profile");
+   });
 });
