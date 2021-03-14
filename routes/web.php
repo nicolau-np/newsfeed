@@ -29,4 +29,12 @@ Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
       Route::get('/edit/{id_noticia}', "NoticiaController@edit");
       Route::put('/update/{id_noticia}', "NoticiaController@update");
    });
+
+   Route::group(['prefix'=>"publicidades", 'middleware'=>"auth"], function(){
+      Route::get('/', "PostPublicitario@index");
+      Route::get('/create', "PostPublicitario@create");
+      Route::post('/store', "PostPublicitario@store");
+      Route::get('/edit/{id_noticia}', "PostPublicitario@edit");
+      Route::put('/update/{id_noticia}', "PostPublicitario@update");
+   });
 });
