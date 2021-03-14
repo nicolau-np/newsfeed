@@ -136,7 +136,7 @@
                   <div role="tabpanel" class="tab-pane active" id="category">
                     <ul>
                         @foreach ($getCategorias as $categorias)
-                            <li class="cat-item"><a href="#">{{$categorias->categoria}}</a></li>
+                            <li class="cat-item"><a href="/category/{{$categorias->categoria}}">{{$categorias->categoria}}</a></li>
                         @endforeach
                     </ul>
                   </div>
