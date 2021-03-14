@@ -10,7 +10,13 @@ $mes = ControllerStatics::converteMes(date('m'));
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{$title}}</title>
+    <meta name="description" content="Angola News">
+    <meta name="keywords" content="Angola News, fique actualizado das novas notícias">
+    <meta name="author" content="Nicolau NP">
+  <title>{{$title}}</title>
+    <link rel="shortcut icon" href="{{asset('assets/img/logonews.png')}}" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="{{asset('assets/img/logonews.png')}}" />
+
 
     <!-- Bootstrap -->
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
