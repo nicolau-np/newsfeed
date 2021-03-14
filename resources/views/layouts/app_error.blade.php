@@ -117,9 +117,9 @@ $banners = ControllerStatics::getBanners();
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav main_nav">
               <li class="active"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
-              <li><a href="#">Política</a></li>   
-              <li><a href="#">Tecnologia</a></li> 
-              <li><a href="#">Desporto</a></li> 
+              <li><a href="/category/Política">Política</a></li>   
+              <li><a href="/category/Tecnologia">Tecnologia</a></li> 
+              <li><a href="/category/Desporto">Desporto</a></li> 
               <li><a href="/contact">Contactar</a></li>
             </ul>           
           </div><!--/.nav-collapse -->      
