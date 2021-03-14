@@ -18,9 +18,9 @@ class PostPublicitarioController extends Controller
         $data = [
             'title' => "Post Publicitário",
             'menu' => "Post Publicitário",
-            'submenu' => null,
+            'submenu' => "Listar",
             'type' => "post_publicitario",
-            'getPostPublicitario'=>$post_publicitario,
+            'getPostPublicitario' => $post_publicitario,
 
         ];
         return view('admin.post_publicitario.list', $data);
@@ -33,7 +33,14 @@ class PostPublicitarioController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'title' => "Post Publicitário",
+            'menu' => "Post Publicitário",
+            'submenu' => "Novo",
+            'type' => "post_publicitario",
+
+        ];
+        return view('admin.post_publicitario.create', $data);
     }
 
     /**
@@ -44,7 +51,23 @@ class PostPublicitarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'titulo' => ['required', 'string', 'min:5', 'max:255'],
+            'estado' => ['required', 'string', 'min:1', 'max:4'],
+            'link' => ['required', 'string'],
+            'linkImg' => ['required', 'string'],
+        ]);
+
+        $data = [
+            'titulo' => $request->titulo,
+            'link' => $request->link,
+            'linkImg' => $request->linkImg,
+            'estado' => $request->estado,
+        ];
+
+        if (PostPublicitario::create($data)) {
+            return back()->with(['success' => "Feito com sucesso"]);
+        }
     }
 
     /**

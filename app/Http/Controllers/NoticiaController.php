@@ -19,7 +19,7 @@ class NoticiaController extends Controller
         $data = [
             'title' => "Notícias",
             'menu' => "Notícias",
-            'submenu' => null,
+            'submenu' => "Listar",
             'type' => "noticias",
             'getNoticias' => $noticias,
         ];
@@ -37,7 +37,7 @@ class NoticiaController extends Controller
         $data = [
             'title' => "Notícias",
             'menu' => "Notícias",
-            'submenu' => null,
+            'submenu' => "Novo",
             'type' => "noticias",
             'getCategorias' => $categorias,
         ];
@@ -108,7 +108,7 @@ class NoticiaController extends Controller
         $data = [
             'title' => "Notícias",
             'menu' => "Notícias",
-            'submenu' => null,
+            'submenu' => "Editar",
             'type' => "noticias",
             'getCategorias' => $categorias,
             'getNoticia' => $noticia,
