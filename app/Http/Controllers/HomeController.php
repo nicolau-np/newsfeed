@@ -88,6 +88,19 @@ class HomeController extends Controller
 
     public function category($categoria)
     {
-        
+        $categoriaLis = Categoria::where('categoria', $categoria)->first();
+        if (!$categoriaLis) {
+            return back()->with(['error' => "Não encontrou categoria"]);
+        }
+        $noticias = Noticia::where('id_categoria', $categoriaLis->id)->get();
+
+        $data = [
+            'title' => $categoriaLis->categoria,
+            'menu' => $categoriaLis->categoria,
+            'submenu' => null,
+            'type' => "category",
+            'getNoticias' => $noticias,
+        ];
+        return view('category', $data);
     }
 }

@@ -253,7 +253,7 @@ $last_pub = ControllerStatics::getLasPub();
       </div>       
       <div class="footer_bottom">
         <p class="copyright">
-          Todos os direitos reservados <a href="/">Notícias</a>
+          Todos os direitos reservados <a href="/">angoNews</a>
         </p>
         <p class="developer">Developed By <a href="#" rel="nofollow">Nicolau NP</a></p>
       </div>    
