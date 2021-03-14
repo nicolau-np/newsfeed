@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index()
     {
         $getNegocios = Noticia::whereHas('categoria', function ($query) {
-            $query->where('categoria', "Negocios");
+            $query->where('categoria', "Negócios");
         })->where('estado', "on")->limit(4)->get()->sortByDesc('id');
 
         $getModa = Noticia::whereHas('categoria', function ($query) {
