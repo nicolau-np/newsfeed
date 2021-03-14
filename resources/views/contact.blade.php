@@ -1,3 +1,7 @@
+<?php 
+use App\Http\Controllers\ControllerStatics;
+$pub_populares = ControllerStatics::getPubPopulares();
+?>
 @extends('layouts.app')
 @section('content')
      <!-- ==================start content body section=============== -->
@@ -10,10 +14,10 @@
                 <h2>Entre em contato conosco</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <form class="contact_form">
-                  <input class="form-control" type="text" placeholder="Name*">
+                  <input class="form-control" type="text" placeholder="Nome*">
                   <input class="form-control" type="email" placeholder="Email*">
-                  <textarea class="form-control" cols="30" rows="10" placeholder="Message*"></textarea>
-                  <input type="submit" value="Send Message">                
+                  <textarea class="form-control" cols="30" rows="10" placeholder="Mensagem*"></textarea>
+                  <input type="submit" value="Enviar Mensagem">                
                 </form>
               </div>
               <!-- End contact area -->            
@@ -25,46 +29,18 @@
               <div class="single_sidebar">
                 <h2><span>Publicações populares</span></h2>
                 <ul class="spost_nav">
+                  @foreach ($pub_populares as $pub_popular)
                   <li>
                     <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
+                    <a href="/single_page/{{$pub_popular->id}}" class="media-left">
+                        <img alt="{{$pub_popular->title}}" src="{{asset($pub_popular->imagem)}}">
                       </a>
                       <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                        <a href="/single_page/{{$pub_popular->id}}" class="catg_title">{{$pub_popular->title}}</a>                        
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
-                      </div>
-                    </div>
-                  </li>
+                  @endforeach
                 </ul>
               </div>  
             </aside>
