@@ -68,6 +68,7 @@ class NoticiaController extends Controller
             'description' => $request->descricao,
             'estado' => $request->estado,
             'imagem' => null,
+            'view'=>0,
         ];
 
         if ($request->hasFile('foto') && $request->foto->isValid()) {

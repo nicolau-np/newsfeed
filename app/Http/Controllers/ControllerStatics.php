@@ -95,4 +95,9 @@ class ControllerStatics extends Controller
         return $last_pubCategory;
     }
 
+    public static function getPubPopulares(){
+        $pub_populares = Noticia::where(['estado'=>"on"])->orderBy('view', 'desc')->limit(4)->get();
+        return $pub_populares;
+    }
+
 }

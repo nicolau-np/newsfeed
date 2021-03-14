@@ -72,8 +72,9 @@ class HomeController extends Controller
         $publicacoes_relacionadas = Noticia::whereHas('categoria', function ($query) use ($noticia) {
             $query->where('categoria', $noticia->categoria->categoria);
         })->where('estado', "on")->where('id', '!=', $noticia->id)->inRandomOrder()->limit(3)->get();
-
+        
         $categorias = Categoria::where('estado', 'on')->get();
+        Noticia::find($id)->increment('view');
         $data = [
             'title' => $noticia->title,
             'menu' => $noticia->title,
