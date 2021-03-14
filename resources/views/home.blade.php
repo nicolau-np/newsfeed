@@ -248,14 +248,10 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="category">
                 <ul>
-                  <li class="cat-item"><a href="#">Desporto</a></li>
-                  <li class="cat-item"><a href="#">Moda</a></li>
-                  <li class="cat-item"><a href="#">Negócios</a></li>
-                  <li class="cat-item"><a href="#">Tecnologia</a></li>
-                  <li class="cat-item"><a href="#">Jogos</a></li>
-                  <li class="cat-item"><a href="#">Estilo de Vida</a></li>
-                  <li class="cat-item"><a href="#">Galeria</a></li>
-                </ul>
+                  @foreach ($getCategorias as $categorias)
+                   <li class="cat-item"><a href="#">{{$categorias->categoria}}</a></li>
+                  @endforeach
+                 </ul>
               </div>
               <div role="tabpanel" class="tab-pane" id="video">
                 <div class="vide_area">                   
@@ -319,12 +315,10 @@
           <div class="single_sidebar wow fadeInDown">
             <h2><span>Arquivo de Categoria</span></h2>
             <select class="catgArchive">
-              <option>Categoria</option>
-              <option>Estilo de Vida</option>
-              <option>Desporto</option>
-              <option>Tecnologia</option>
-              <option>Passos</option>
-            </select>
+              @foreach ($getCategorias as $categorias)
+              <option>{{$categorias->categoria}}</option>
+              @endforeach
+             </select>
           </div>
           <!-- End category Archive -->
             <!-- sponsor add -->
@@ -333,7 +327,7 @@
             <ul>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Rss Feed</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a href="/login">Login</a></li>
               <li><a href="#">Estilo de Vida</a></li>
             </ul>
           </div>
