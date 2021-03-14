@@ -92,8 +92,9 @@ $mes = ControllerStatics::converteMes(date('m'));
                 Angola <span>News</span>
               </a> 
             </div>
+            <!-- banner_728x90.gif-->
             <div class="add_banner">
-              <a href="#"><img src="https://news.bitcoin.com/wp-content/uploads/2017/01/Standard-Cashback-Banner-728x90-GIF.gif" alt="img"></a>
+              <a href="#"><img src="https://thumbs.gfycat.com/AnchoredPointedBluebird-size_restricted.gif" alt="img"></a>
             </div>
           </div>
         </div>

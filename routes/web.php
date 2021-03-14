@@ -19,6 +19,6 @@ Route::get('/contact', "HomeController@contact");
 Route::get('/login', "UserController@login")->name('login');
 Route::post('/logar', "UserController@logar")->name('logar');
 
-Route::groupe(['prefix'=>"admin", 'middleware'=>"auth"], function(){
-   Route::get('/', "AdminController@index"); 
+Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
+   Route::get('/', "AdminController@index")->name('admin'); 
 });

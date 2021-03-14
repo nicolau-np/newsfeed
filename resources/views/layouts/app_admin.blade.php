@@ -19,7 +19,7 @@
         <div class="menu">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Mais Fibras</a>
+                  <a class="navbar-brand" href="#">AngolaNews</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -27,7 +27,7 @@
                     <div class="navbar-nav">
                       <a class="nav-link @if($menu=='Home') active @endif" aria-current="page" href="/admin/">Home</a>
                       <a class="nav-link @if($menu=='Usuários') active @endif" href="/admin/usuarios/">Usuários</a>
-                      <a class="nav-link @if($menu=='Categorias') active @endif" href="/admin/servicos/">Serviços</a>
+                      <a class="nav-link @if($menu=='Categorias') active @endif" href="/admin/categorias/">Categorias</a>
                       <a class="nav-link @if($menu=='Subscritos') active @endif" href="/admin/subscritos/">Subscritos</a>
                       <a class="nav-link @if($menu=='Notícias') active @endif" href="/admin/noticias/">Notícias</a>
                       <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="true">Logout</a>
