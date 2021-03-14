@@ -135,7 +135,7 @@
                 <li>
                   <div class="photo_grid">
                     <figure class="effect-layla">
-                    <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset($galeria->imagem)}}" title="Photography Ttile 1">
+                    <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset($galeria->imagem)}}" title="{{$galeria->title}}">
                     <img src="{{asset($galeria->imagem)}}" alt="{{$galeria->title}}"/></a>  
                     </figure>
                   </div>
@@ -154,59 +154,36 @@
                 <li>
                   <figure class="bsbig_fig  wow fadeInDown">
                     <a class="featured_img" href="single_page.html">
-                        <img src="{{asset('assets/img/featured_img1.jpg')}}" alt="img">
+                    <img src="{{asset($getJogos->first()->imagem)}}" alt="{{$getJogos->first()->title}}">
                         <span class="overlay"></span>
                     </a>
                     <figcaption>
-                      <a href="single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a>
+                      <a href="single_page.html">{{$getJogos->first()->title}}</a>
                     </figcaption>
-                      <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
+                      <p>
+                        <?php 
+                          echo $getJogos->first()->min_description;
+                        ?>
+                      </p>
                   </figure>
                 </li>
               </ul>
             </div>
             <div class="single_post_content_right">
               <ul class="spost_nav">
-                <li>
+                @foreach ($getJogos as $jogos)
+                     <li>
                   <div class="media wow fadeInDown">
                     <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
+                    <img alt="{{$jogos->title}}" src="{{asset($jogos->imagem)}}">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                    <a href="single_page.html" class="catg_title">{{$jogos->min_description}}</a>                        
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
-                    </div>
-                  </div>
-                </li>
+                @endforeach
+              
               </ul>
             </div>
           </div>

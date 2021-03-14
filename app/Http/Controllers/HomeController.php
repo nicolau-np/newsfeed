@@ -27,8 +27,12 @@ class HomeController extends Controller
             $query->where('categoria', "Tecnologia");
         })->limit(4)->get()->sortByDesc('id');
 
+        $getJogos = Noticia::whereHas('categoria', function($query){
+            $query->where('categoria', "Jogos");
+        })->limit(4)->get()->sortByDesc('id');
+
         $galeria = Noticia::orderBy('id', 'desc')->limit(6)->get();
-        
+  
         $data = [
             'title' => "angoNews",
             'menu' => "Home",
@@ -37,6 +41,7 @@ class HomeController extends Controller
             'getNegocios'=>$getNegocios,
             'getModa'=>$getModa,
             'getTecnologia'=>$getTecnologia,
+            'getJogos'=>$getJogos,
             'getGaleria'=>$galeria,
         ];
         return view('home', $data);
