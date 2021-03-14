@@ -180,7 +180,7 @@ if($type=="category"){
     </section>
 	
     <!-- start slider section -->
-    @if ($menu=="Home")
+    @if ($type=="home" || $type=="category")
     <section id="sliderSection">
       <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
