@@ -55,20 +55,29 @@ class NoticiaController extends Controller
         $request->validate([
             'titulo' => ['required', 'string', 'min:4', 'max:255', 'unique:noticias,title'],
             'estado' => ['required', 'string', 'min:1', 'max:4'],
-            'categoria' => ['required', 'string', 'min:2'],
+            'categoria' => ['required', 'Integer'],
             'foto' => ['required', 'mimes:jpg,jpeg,png,JPG,JPEG,PNG', 'max:10000'],
             'min_description' => ['required', 'string', 'min:20', 'max:255'],
             'descricao' => ['required', 'string', 'min:20'],
         ]);
 
         $data = [
-            'id_categoria'=>$request->categoria,
-            'title'=>$request->titulo,
-            'min_description'=>$request->min_description,
-            'description'=>$request->descricao,
-            'estado'=>$request->estado,
-            'imagem'=>null,
+            'id_categoria' => $request->categoria,
+            'title' => $request->titulo,
+            'min_description' => $request->min_description,
+            'description' => $request->descricao,
+            'estado' => $request->estado,
+            'imagem' => null,
         ];
+
+        if ($request->hasFile('foto') && $request->foto->isValid()) {
+            $path = $request->file('foto')->store('img_noticias');
+            $data['imagem'] = $path;
+        }
+
+        if (Noticia::create($data)) {
+            return back()->with(['success' => "Feito com sucesso"]);
+        }
     }
 
     /**
@@ -90,7 +99,21 @@ class NoticiaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $noticia = Noticia::find($id);
+        if (!$noticia) {
+            return back()->with(['error' => "Não encontrou a notícia"]);
+        }
+
+        $categorias = Categoria::where('estado', "on")->pluck('categoria', 'id');
+        $data = [
+            'title' => "Notícias",
+            'menu' => "Notícias",
+            'submenu' => null,
+            'type' => "noticias",
+            'getCategorias' => $categorias,
+            'getNoticia' => $noticia,
+        ];
+        return view('admin.news.edit', $data);
     }
 
     /**
@@ -102,7 +125,47 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $noticia = Noticia::find($id);
+        if (!$noticia) {
+            return back()->with(['error' => "Não encontrou a notícia"]);
+        }
+
+        $request->validate([
+            'titulo' => ['required', 'string', 'min:4', 'max:255',],
+            'estado' => ['required', 'string', 'min:1', 'max:4'],
+            'categoria' => ['required', 'Integer'],
+            'min_description' => ['required', 'string', 'min:20', 'max:255'],
+            'descricao' => ['required', 'string', 'min:20'],
+        ]);
+
+        $data = [
+            'id_categoria' => $request->categoria,
+            'title' => $request->titulo,
+            'min_description' => $request->min_description,
+            'description' => $request->descricao,
+            'estado' => $request->estado,
+            'imagem' => $noticia->imagem,
+        ];
+        if ($noticia->title != $request->titulo) {
+            $request->validate([
+                'titulo' => ['required', 'string', 'min:4', 'max:255', 'unique:noticias,title'],
+            ]);
+        }
+        
+        if ($request->hasFile('foto') && $request->foto->isValid()) {
+            $request->validate([
+                'foto' => ['required', 'mimes:jpg,jpeg,png,JPG,JPEG,PNG', 'max:10000']
+            ]);
+            if ($noticia->imagem != "" && file_exists($noticia->imagem)) {
+                unlink($noticia->imagem );
+            }
+            $path = $request->file('foto')->store('img_noticias');
+            $data['imagem'] = $path;
+        }
+
+        if (Noticia::find($id)->update($data)) {
+            return back()->with(['success' => "Feito com sucesso"]);
+        }
     }
 
     /**

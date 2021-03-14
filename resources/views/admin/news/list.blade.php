@@ -19,9 +19,9 @@
             @foreach ($getNoticias as $noticias)
              <tr>
              <td>
-                 <img src="{{asset($noticias->img)}}" alt="" style="width: 53px; height:53px;">
+                 <img src="{{asset($noticias->imagem)}}" alt="" style="width: 53px; height:53px;">
              </td>
-            <td>{{$noticias->titulo}}</td>
+            <td>{{$noticias->title}}</td>
             <td>{{$noticias->categoria->categoria}}</td>
             <td>{{$noticias->min_description}}</td>
             <td>{{$noticias->estado}}</td>
