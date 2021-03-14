@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            'title' => "NewsFeed",
+            'title' => "AngolaNews",
             'menu' => "Home",
             'submenu' => null,
             'type' => "home",
