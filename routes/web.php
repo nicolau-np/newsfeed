@@ -25,5 +25,8 @@ Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
    Route::group(['prefix'=>"noticias", 'middleware'=>"auth"], function(){
       Route::get('/', "NoticiaController@index");
       Route::get('/create', "NoticiaController@create");
+      Route::post('/store', "NoticiaController@store");
+      Route::get('/edit/{id_noticia}', "NoticiaController@edit");
+      Route::put('/update/{id_noticia}', "NoticiaController@update");
    });
 });

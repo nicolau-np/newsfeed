@@ -64,10 +64,10 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    {{Form::label('pDescricao', 'Rescalgo da Notícia')}} <span class="text-danger">*</span>
-                    {{ Form::textarea('pDescricao', null, ['class'=>"form-control", 'cols'=>"100", "rows"=>"3", 'placeholder'=>"Rescalgo da Notícia"]) }}
-                    @if($errors->has('pDescricao'))
-                       <span class="text-danger">{{$errors->first('pDescricao')}}</span>
+                    {{Form::label('min_description', 'Rescalgo da Notícia')}} <span class="text-danger">*</span>
+                    {{ Form::textarea('min_description', null, ['class'=>"form-control", 'cols'=>"100", "rows"=>"3", 'placeholder'=>"Rescalgo da Notícia"]) }}
+                    @if($errors->has('min_description'))
+                       <span class="text-danger">{{$errors->first('min_description')}}</span>
                     @endif
                 </div>
             </div>

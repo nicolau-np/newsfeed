@@ -23,7 +23,7 @@
              </td>
             <td>{{$noticias->titulo}}</td>
             <td>{{$noticias->categoria->categoria}}</td>
-            <td>{{$noticias->min_descricao}}</td>
+            <td>{{$noticias->min_description}}</td>
             <td>{{$noticias->estado}}</td>
             <td>
             <a href="/admin/noticias/edit/{{$noticias->id}}" class="btn btn-primary btn-sm">Editar</a>&nbsp;&nbsp;

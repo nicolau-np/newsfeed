@@ -13,6 +13,7 @@ class Noticia extends Model
         'title',
         'min_description',
         'description',
+        'imagem',
         'estado',
     ];
 

@@ -15,13 +15,13 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::orderBy('id','desc')->paginate(5);
+        $noticias = Noticia::orderBy('id', 'desc')->paginate(5);
         $data = [
             'title' => "Notícias",
             'menu' => "Notícias",
             'submenu' => null,
             'type' => "noticias",
-            'getNoticias'=>$noticias,
+            'getNoticias' => $noticias,
         ];
         return view('admin.news.list', $data);
     }
@@ -39,7 +39,7 @@ class NoticiaController extends Controller
             'menu' => "Notícias",
             'submenu' => null,
             'type' => "noticias",
-            'getCategorias'=>$categorias,
+            'getCategorias' => $categorias,
         ];
         return view('admin.news.create', $data);
     }
@@ -52,7 +52,23 @@ class NoticiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'titulo' => ['required', 'string', 'min:4', 'max:255', 'unique:noticias,title'],
+            'estado' => ['required', 'string', 'min:1', 'max:4'],
+            'categoria' => ['required', 'string', 'min:2'],
+            'foto' => ['required', 'mimes:jpg,jpeg,png,JPG,JPEG,PNG', 'max:10000'],
+            'min_description' => ['required', 'string', 'min:20', 'max:255'],
+            'descricao' => ['required', 'string', 'min:20'],
+        ]);
+
+        $data = [
+            'id_categoria'=>$request->categoria,
+            'title'=>$request->titulo,
+            'min_description'=>$request->min_description,
+            'description'=>$request->descricao,
+            'estado'=>$request->estado,
+            'imagem'=>null,
+        ];
     }
 
     /**
