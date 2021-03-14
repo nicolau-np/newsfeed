@@ -10,8 +10,8 @@ $mes = ControllerStatics::converteMes(date('m'));
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Angola News">
-    <meta name="keywords" content="Angola News, fique actualizado das novas notícias">
+    <meta name="description" content="angoNews">
+    <meta name="keywords" content="angoNews, fique actualizado das novas notícias">
     <meta name="author" content="Nicolau NP">
   <title>{{$title}}</title>
     <link rel="shortcut icon" href="{{asset('assets/img/logonews.png')}}" type="image/x-icon" />
@@ -89,7 +89,7 @@ $mes = ControllerStatics::converteMes(date('m'));
               </a> -->
               <!-- for your text logo format -->
                <a href="#" class="logo">
-                Angola <span>News</span>
+                ango <span>News</span>
               </a> 
             </div>
             <!-- banner_728x90.gif-->

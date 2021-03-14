@@ -9,7 +9,7 @@ class AdminController extends Controller
     public function index()
     {
         $data = [
-            'title' => "AngolaNews Admin",
+            'title' => "angoNews Admin",
             'menu' => "Home",
             'submenu' => null,
             'type' => "home",
