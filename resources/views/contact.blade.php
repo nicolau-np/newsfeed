@@ -7,7 +7,7 @@
             <div class="left_content">
             <!-- start contact area -->
               <div class="contact_area">
-                <h2>Contact Us</h2>
+                <h2>Entre em contato conosco</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <form class="contact_form">
                   <input class="form-control" type="text" placeholder="Name*">
@@ -23,7 +23,7 @@
           <div class="col-lg-4 col-md-4 col-sm-4">
             <aside class="right_content">
               <div class="single_sidebar">
-                <h2><span>Popular Post</span></h2>
+                <h2><span>Publicações populares</span></h2>
                 <ul class="spost_nav">
                   <li>
                     <div class="media wow fadeInDown">
