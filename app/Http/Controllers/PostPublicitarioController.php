@@ -89,7 +89,20 @@ class PostPublicitarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post_publicitario = PostPublicitario::find($id);
+        if(!$post_publicitario){
+            return back()->with(['error'=>"Nao encontrou publicidade"]);
+        }
+
+        $data = [
+            'title' => "Post Publicitário",
+            'menu' => "Post Publicitário",
+            'submenu' => "Editar",
+            'type' => "post_publicitario",
+            'getPostPublicitario'=>$post_publicitario,
+
+        ];
+        return view('admin.post_publicitario.edit', $data);
     }
 
     /**

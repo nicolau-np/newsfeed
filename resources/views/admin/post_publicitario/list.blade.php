@@ -24,8 +24,8 @@
             <td><a href="{{$post_publicitario->link}}">{{$post_publicitario->link}}</a></td>
             <td>{{$post_publicitario->estado}}</td>
             <td>
-            <a href="/admin/noticias/edit/{{$post_publicitario->id}}" class="btn btn-primary btn-sm">Editar</a>&nbsp;&nbsp;
-            <a href="/admin/noticias/delete/{{$post_publicitario->id}}" class="btn btn-danger btn-sm">Eliminar</a>&nbsp;&nbsp;
+            <a href="/admin/publicidades/edit/{{$post_publicitario->id}}" class="btn btn-primary btn-sm">Editar</a>&nbsp;&nbsp;
+            <a href="/admin/publicidades/delete/{{$post_publicitario->id}}" class="btn btn-danger btn-sm">Eliminar</a>&nbsp;&nbsp;
             </td>
             </tr>
             @endforeach
