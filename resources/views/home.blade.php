@@ -12,12 +12,12 @@
                 <li>
 
                   <figure class="bsbig_fig">
-                    <a href="single_page.html" class="featured_img">
+                    <a href="/single_page/{{$getNegocios->first()->id}}" class="featured_img">
                         <img alt="img" src="{{asset($getNegocios->first()->imagem)}}" style="height: 13em;">
                         <span class="overlay"></span>
                     </a>
                     <figcaption>
-                      <a href="single_page.html">{{$getNegocios->first()->title}}</a>
+                      <a href="/single_page/{{$getNegocios->first()->id}}">{{$getNegocios->first()->title}}</a>
                     </figcaption>
                       <p>
                         <?php 
@@ -33,11 +33,11 @@
                 @foreach ($getNegocios as $negocios)
                     <li>
                   <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
+                    <a href="/single_page/{{$negocios->id}}" class="media-left">
                       <img alt="{{$negocios->title}}" src="{{asset($negocios->imagem)}}">
                     </a>
                     <div class="media-body">
-                    <a href="single_page.html" class="catg_title">{{$negocios->title}}</a>                        
+                    <a href="/single_page/{{$negocios->id}}" class="catg_title">{{$negocios->title}}</a>                        
                     </div>
                   </div>
                 </li>
@@ -53,12 +53,12 @@
                 <ul class="business_catgnav wow fadeInDown">
                   <li>
                      <figure class="bsbig_fig">
-                      <a href="single_page.html" class="featured_img">
+                      <a href="/single_page/{{$getModa->first()->id}}" class="featured_img">
                           <img alt="img" src="{{asset($getModa->first()->imagem)}}" style="height: 16.3em;">
                           <span class="overlay"></span>
                       </a>
                       <figcaption>
-                      <a href="single_page.html">{{$getModa->first()->title}}</a>
+                      <a href="/single_page/{{$getModa->first()->id}}">{{$getModa->first()->title}}</a>
                       </figcaption>
                         <p>
                           <?php 
@@ -74,11 +74,11 @@
               @foreach ($getModa as $moda)
                 <li>
                   <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
+                    <a href="/single_page/{{$moda->id}}" class="media-left">
                       <img alt="img" src="{{asset($moda->imagem)}}">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title">{{$moda->title}}</a>                        
+                      <a href="/single_page/{{$moda->id}}" class="catg_title">{{$moda->title}}</a>                        
                     </div>
                   </div>
                 </li>
@@ -93,12 +93,12 @@
                   <li>
 
                     <figure class="bsbig_fig wow fadeInDown">
-                      <a href="single_page.html" class="featured_img">
+                      <a href="/single_page/{{$getTecnologia->first()->id}}" class="featured_img">
                           <img alt="img" src="{{asset($getTecnologia->first()->imagem)}}" style="height: 16.3em;">
                           <span class="overlay"></span>
                       </a>
                       <figcaption>
-                      <a href="single_page.html">{{$getTecnologia->first()->title}}</a>
+                      <a href="/single_page/{{$getTecnologia->first()->id}}">{{$getTecnologia->first()->title}}</a>
                       </figcaption>
                         <p>
                           <?php 
@@ -113,11 +113,11 @@
                   @foreach ($getTecnologia as $tecnologia)
                     <li>
                     <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
+                      <a href="/single_page/{{$tecnologia->id}}" class="media-left">
                         <img alt="img" src="{{asset($tecnologia->imagem)}}">
                       </a>
                       <div class="media-body">
-                      <a href="single_page.html" class="catg_title">{{$tecnologia->title}}</a>                        
+                      <a href="/single_page/{{$tecnologia->id}}" class="catg_title">{{$tecnologia->title}}</a>                        
                       </div>
                     </div>
                   </li>
@@ -153,12 +153,12 @@
               <ul class="business_catgnav">
                 <li>
                   <figure class="bsbig_fig  wow fadeInDown">
-                    <a class="featured_img" href="single_page.html">
+                    <a class="featured_img" href="/single_page/">
                     <img src="{{asset($getJogos->first()->imagem)}}" alt="{{$getJogos->first()->title}}">
                         <span class="overlay"></span>
                     </a>
                     <figcaption>
-                      <a href="single_page.html">{{$getJogos->first()->title}}</a>
+                      <a href="/single_page/{{$getJogos->first()->id}}">{{$getJogos->first()->title}}</a>
                     </figcaption>
                       <p>
                         <?php 
@@ -174,11 +174,11 @@
                 @foreach ($getJogos as $jogos)
                      <li>
                   <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
+                    <a href="/single_page/{{$jogos->id}}" class="media-left">
                     <img alt="{{$jogos->title}}" src="{{asset($jogos->imagem)}}">
                     </a>
                     <div class="media-body">
-                    <a href="single_page.html" class="catg_title">{{$jogos->min_description}}</a>                        
+                    <a href="/single_page/{{$jogos->id}}" class="catg_title">{{$jogos->min_description}}</a>                        
                     </div>
                   </div>
                 </li>
@@ -197,41 +197,41 @@
             <ul class="spost_nav">
               <li>
                 <div class="media wow fadeInDown">
-                  <a href="single_page.html" class="media-left">
+                  <a href="/single_page/" class="media-left">
                     <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
                   </a>
                   <div class="media-body">
-                    <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                    <a href="/single_page/" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
                   </div>
                 </div>
               </li>
               <li>
                 <div class="media wow fadeInDown">
-                  <a href="single_page.html" class="media-left">
+                  <a href="/single_page/" class="media-left">
                     <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
                   </a>
                   <div class="media-body">
-                    <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
+                    <a href="/single_page/" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
                   </div>
                 </div>
               </li>
               <li>
                 <div class="media wow fadeInDown">
-                  <a href="single_page.html" class="media-left">
+                  <a href="/single_page/" class="media-left">
                     <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
                   </a>
                   <div class="media-body">
-                    <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
+                    <a href="/single_page/" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
                   </div>
                 </div>
               </li>
               <li>
                 <div class="media wow fadeInDown">
-                  <a href="single_page.html" class="media-left">
+                  <a href="/single_page/" class="media-left">
                     <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
                   </a>
                   <div class="media-body">
-                    <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
+                    <a href="/single_page/" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
                   </div>
                 </div>
               </li>
