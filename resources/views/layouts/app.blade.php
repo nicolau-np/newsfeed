@@ -131,11 +131,11 @@ if($type=="category"){
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav main_nav">
-            <li class="active"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
-            <li><a href="/category/Política">Política</a></li>   
-            <li><a href="/category/Tecnologia">Tecnologia</a></li> 
-            <li><a href="/category/Desporto">Desporto</a></li> 
-            <li><a href="/contact">Contactar</a></li>
+            <li class="@if($menu=="Home") active @endif"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
+            <li class="@if($menu=="Política") active @endif"><a href="/category/Política">Política</a></li>   
+            <li class="@if($menu=="Tecnologia") active @endif"><a href="/category/Tecnologia">Tecnologia</a></li> 
+            <li class="@if($menu=="Desporto") active @endif"><a href="/category/Desporto">Desporto</a></li> 
+            <li class="@if($menu=="Contactar") active @endif"><a href="/contact">Contactar</a></li>
           </ul>           
         </div><!--/.nav-collapse -->      
       </nav>
