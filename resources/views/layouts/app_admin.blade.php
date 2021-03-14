@@ -28,7 +28,7 @@
                       <a class="nav-link @if($menu=='Home') active @endif" aria-current="page" href="/admin/">Home</a>
                       <a class="nav-link @if($menu=='Usuários') active @endif" href="/admin/usuarios/">Usuários</a>
                       <a class="nav-link @if($menu=='Categorias') active @endif" href="/admin/categorias/">Categorias</a>
-                      <a class="nav-link @if($menu=='Banners') active @endif" href="/admin/subscritos/">Post Publicitário</a>
+                      <a class="nav-link @if($menu=='Banners') active @endif" href="/admin/publicidades/">Post Publicitário</a>
                       <a class="nav-link @if($menu=='Notícias') active @endif" href="/admin/noticias/">Notícias</a>
                       <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="true">Logout</a>
                     </div>

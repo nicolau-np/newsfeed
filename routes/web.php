@@ -21,4 +21,9 @@ Route::post('/logar', "UserController@logar")->name('logar');
 
 Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
    Route::get('/', "AdminController@index")->name('admin'); 
+
+   Route::group(['prefix'=>"noticias", 'middleware'=>"auth"], function(){
+      Route::get('/', "NoticiaController@index");
+      Route::get('/create', "NoticiaController@create");
+   });
 });
