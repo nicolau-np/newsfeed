@@ -75,4 +75,9 @@ class ControllerStatics extends Controller
         return $banners;
     }
 
+    public static function getLasPub(){
+        $last_pub = Noticia::where('estado', "on")->orderBy('id', 'desc')->limit(10)->get();
+        return $last_pub;
+    }
+
 }

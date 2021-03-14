@@ -5,6 +5,7 @@ $mes = ControllerStatics::converteMes(date('m'));
 $last_news = ControllerStatics::getLastNews();
 $sliderNews = ControllerStatics::sliderNews();
 $banners = ControllerStatics::getBanners();
+$last_pub = ControllerStatics::getLasPub();
 ?>
 
 <!DOCTYPE html>
@@ -178,61 +179,23 @@ $banners = ControllerStatics::getBanners();
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="latest_post">
-            <h2><span>Útimas publicações</span></h2>
+            <h2><span>Últimas publicações</span></h2>
             <div class="latest_post_container">
               <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
               <ul class="latest_postnav">
-                <li>
+                @foreach ($last_pub as $lastpub)
+                    <li>
                   <div class="media">
                     <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
+                    <img alt="{{$lastpub->title}}" src="{{asset($lastpub->imagem)}}">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                      <a href="single_page.html" class="catg_title"> {{$lastpub->title}}</a>                        
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="media">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                @endforeach
+               </ul>
              <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
             </div>
           </div>
