@@ -23,4 +23,15 @@ class HomeController extends Controller
         ];
         return view('home', $data);
     }
+
+    public function contact(){
+        $data = [
+            'title' => "Contactar",
+            'menu' => "Contactar",
+            'submenu' => null,
+            'type' => "contact",
+
+        ];
+        return view('contact', $data);
+    }
 }
