@@ -10,7 +10,8 @@
             <div class="single_post_content_left">
               <ul class="business_catgnav  wow fadeInDown">
                 <li>
-
+                  @if ($getNegocios->first()!=null)
+                      
                   <figure class="bsbig_fig">
                     <a href="/single_page/{{$getNegocios->first()->id}}" class="featured_img">
                         <img alt="img" src="{{asset($getNegocios->first()->imagem)}}" style="height: 13em;">
@@ -25,6 +26,7 @@
                         ?>
                       </p>
                   </figure>
+                  @endif
                 </li>
               </ul>
             </div>
@@ -52,7 +54,8 @@
                 <h2><span>Moda</span></h2>              
                 <ul class="business_catgnav wow fadeInDown">
                   <li>
-                     <figure class="bsbig_fig">
+                    @if ($getModa->first()!=null)
+                         <figure class="bsbig_fig">
                       <a href="/single_page/{{$getModa->first()->id}}" class="featured_img">
                           <img alt="img" src="{{asset($getModa->first()->imagem)}}" style="height: 16.3em;">
                           <span class="overlay"></span>
@@ -65,8 +68,8 @@
                             echo $getModa->first()->min_description;
                           ?>
                         </p>
-                    </figure>  
-
+                    </figure> 
+                    @endif
                   </li>
                 </ul>
                 <ul class="spost_nav">
@@ -92,7 +95,8 @@
                 <ul class="business_catgnav">
                   <li>
 
-                    <figure class="bsbig_fig wow fadeInDown">
+                    @if ($getTecnologia->first()!=null)
+                        <figure class="bsbig_fig wow fadeInDown">
                       <a href="/single_page/{{$getTecnologia->first()->id}}" class="featured_img">
                           <img alt="img" src="{{asset($getTecnologia->first()->imagem)}}" style="height: 16.3em;">
                           <span class="overlay"></span>
@@ -105,7 +109,9 @@
                             echo $getTecnologia->first()->min_description;
                             ?>
                         </p>
-                    </figure>
+                    </figure> 
+                    @endif
+                   
 
                   </li>
                 </ul>
@@ -152,7 +158,8 @@
             <div class="single_post_content_left">
               <ul class="business_catgnav">
                 <li>
-                  <figure class="bsbig_fig  wow fadeInDown">
+                  @if ($getJogos->first()!=null)
+                      <figure class="bsbig_fig  wow fadeInDown">
                     <a class="featured_img" href="/single_page/">
                     <img src="{{asset($getJogos->first()->imagem)}}" alt="{{$getJogos->first()->title}}">
                         <span class="overlay"></span>
@@ -165,8 +172,9 @@
                           echo $getJogos->first()->min_description;
                         ?>
                       </p>
-                  </figure>
-                </li>
+                  </figure> 
+                  @endif
+                 </li>
               </ul>
             </div>
             <div class="single_post_content_right">
