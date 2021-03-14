@@ -372,9 +372,9 @@
           <div class="single_sidebar">
              <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
+              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Categorias</a></li>
               <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
-              <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>               
+              <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comentários</a></li>               
             </ul>
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="category">

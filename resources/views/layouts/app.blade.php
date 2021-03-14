@@ -64,9 +64,9 @@ $mes = ControllerStatics::converteMes(date('m'));
           <div class="header_top">
             <div class="header_top_left">
               <ul class="top_nav">
-                <li><a href="home.html">Principal</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="/">Principal</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/login">Login</a></li>
               </ul>
             </div>
             <div class="header_top_right">
