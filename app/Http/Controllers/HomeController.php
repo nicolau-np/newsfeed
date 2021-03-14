@@ -67,6 +67,10 @@ class HomeController extends Controller
         if(!$noticia){
             return back()->with(['error'=>"Não encontrou notícia"]);
         }
+        $publicacoes_relacionadas = Noticia::whereHas('categoria', function($query)use($noticia){
+            $query->where('categoria', $noticia->categoria->categoria);
+        })->where('estado', "on")->inRandomOrder()->limit(3)->get();
+        
         $categorias = Categoria::where('estado', 'on')->get();
         $data = [
             'title' => $noticia->title,
@@ -75,7 +79,7 @@ class HomeController extends Controller
             'type' => "single_page",
             'getNoticia'=>$noticia,
             'getCategorias'=>$categorias,
-
+            'getNoticiasRelacionadas'=>$publicacoes_relacionadas,
         ];
         return view('single_page', $data);
     }
