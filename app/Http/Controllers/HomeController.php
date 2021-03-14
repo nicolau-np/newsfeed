@@ -67,11 +67,14 @@ class HomeController extends Controller
         if(!$noticia){
             return back()->with(['error'=>"Não encontrou notícia"]);
         }
+        $categorias = Categoria::where('estado', 'on')->get();
         $data = [
             'title' => $noticia->title,
             'menu' => $noticia->title,
             'submenu' => null,
             'type' => "single_page",
+            'getNoticia'=>$noticia,
+            'getCategorias'=>$categorias,
 
         ];
         return view('single_page', $data);
