@@ -3,6 +3,7 @@ use App\Http\Controllers\ControllerStatics;
 $dia_semana = ControllerStatics::converterDiaSemana(date('N'));
 $mes = ControllerStatics::converteMes(date('m'));
 $banners = ControllerStatics::getBanners();
+$last_news = ControllerStatics::getLastNews();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,7 +117,7 @@ $banners = ControllerStatics::getBanners();
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav main_nav">
-              <li class="active"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
+              <li><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
               <li><a href="/category/Política">Política</a></li>   
               <li><a href="/category/Tecnologia">Tecnologia</a></li> 
               <li><a href="/category/Desporto">Desporto</a></li> 
@@ -133,15 +134,9 @@ $banners = ControllerStatics::getBanners();
             <div class="latest_newsarea">      
               <span>Últimas notícias</span>
               <ul id="ticker01" class="news_sticker">
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My First News Item</a></li> 
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Second News Item</a></li>
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Third News Item</a></li>
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Four News Item</a></li> 
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Five News Item</a></li>
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Six News Item</a></li>
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Seven News Item</a></li> 
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Eight News Item</a></li>
-                <li><a href="#"><img src="{{asset('assets/img/news_thumbnail2.jpg')}}" alt="">My Nine News Item</a></li>          
+                @foreach ($last_news as $last)
+                <li><a href="#"><img src="{{asset($last->imagem)}}" alt="{{$last->title}}">{{$last->title}}</a></li> 
+                @endforeach
               </ul>
               <div class="social_area">
                 <ul class="social_nav">
