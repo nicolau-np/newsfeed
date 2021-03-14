@@ -31,10 +31,10 @@ Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
    });
 
    Route::group(['prefix'=>"publicidades", 'middleware'=>"auth"], function(){
-      Route::get('/', "PostPublicitario@index");
-      Route::get('/create', "PostPublicitario@create");
-      Route::post('/store', "PostPublicitario@store");
-      Route::get('/edit/{id_noticia}', "PostPublicitario@edit");
-      Route::put('/update/{id_noticia}', "PostPublicitario@update");
+      Route::get('/', "PostPublicitarioController@index");
+      Route::get('/create', "PostPublicitarioController@create");
+      Route::post('/store', "PostPublicitarioController@store");
+      Route::get('/edit/{id_noticia}', "PostPublicitarioController@edit");
+      Route::put('/update/{id_noticia}', "PostPublicitarioController@update");
    });
 });

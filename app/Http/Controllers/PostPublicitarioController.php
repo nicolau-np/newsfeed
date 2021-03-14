@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\PostPublicitario;
 use Illuminate\Http\Request;
 
-class PostPublicitario extends Controller
+class PostPublicitarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,16 @@ class PostPublicitario extends Controller
      */
     public function index()
     {
-        //
+        $post_publicitario = PostPublicitario::orderBy('id', 'desc')->paginate(5);
+        $data = [
+            'title' => "Post Publicitário",
+            'menu' => "Post Publicitário",
+            'submenu' => null,
+            'type' => "post_publicitario",
+            'getPostPublicitario'=>$post_publicitario,
+
+        ];
+        return view('admin.post_publicitario.list', $data);
     }
 
     /**
