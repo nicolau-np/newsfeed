@@ -14,7 +14,7 @@
                 <h1>{{$getNoticia->title}}</h1>
                 <div class="post_commentbox">
                   <a href="#"><i class="fa fa-user"></i>angoNews</a>
-                  <span><i class="fa fa-calendar"></i>{{date('H:i', strtotime($getNoticia->created_at))}}</span>
+                  <span><i class="fa fa-calendar"></i>{{date('d-m-Y', strtotime($getNoticia->created_at))}} {{date('H:i', strtotime($getNoticia->created_at))}}</span>
                   <a href="#"><i class="fa fa-tags"></i>{{$getNoticia->categoria->categoria}}</a>
                 </div>
                 <div class="single_page_content">
