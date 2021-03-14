@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Noticia;
 use Illuminate\Http\Request;
 
 class ControllerStatics extends Controller
@@ -9,8 +10,6 @@ class ControllerStatics extends Controller
 
     protected static $dia_extensao;
     protected static $mes_extensao;
-
-    
     
     public static function converterDiaSemana($dia_compreensao){
         if($dia_compreensao==1){
@@ -59,4 +58,15 @@ class ControllerStatics extends Controller
         }
         return self::$mes_extensao;
     }
+
+    public static function getLastNews(){
+        $last_news = Noticia::where('estado', "on")->orderBy('id', 'desc')->limit(6)->get();
+        return $last_news;
+    }
+
+    public static function sliderNews(){
+        $last_news = Noticia::where('estado', "on")->inRandomOrder()->limit(20)->get();;
+        return $last_news;
+    }
+
 }

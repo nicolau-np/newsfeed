@@ -2,6 +2,8 @@
 use App\Http\Controllers\ControllerStatics;
 $dia_semana = ControllerStatics::converterDiaSemana(date('N'));
 $mes = ControllerStatics::converteMes(date('m'));
+$last_news = ControllerStatics::getLastNews();
+$sliderNews = ControllerStatics::sliderNews();
 ?>
 
 <!DOCTYPE html>
@@ -131,15 +133,9 @@ $mes = ControllerStatics::converteMes(date('m'));
           <div class="latest_newsarea">      
             <span>Últimas notícias</span>
             <ul id="ticker01" class="news_sticker">
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My First News Item</a></li> 
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Second News Item</a></li>
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Third News Item</a></li>
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Four News Item</a></li> 
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Five News Item</a></li>
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Six News Item</a></li>
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Seven News Item</a></li> 
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail3.jpg')}}" alt="">My Eight News Item</a></li>
-              <li><a href="#"><img src="{{asset('assets/img/news_thumbnail2.jpg')}}" alt="">My Nine News Item</a></li>          
+              @foreach ($last_news as $last)
+              <li><a href="#"><img src="{{asset($last->imagem)}}" alt="{{$last->title}}">{{$last->title}}</a></li> 
+              @endforeach
             </ul>
             <div class="social_area">
               <ul class="social_nav">
@@ -165,34 +161,15 @@ $mes = ControllerStatics::converteMes(date('m'));
         <div class="col-lg-8 col-md-8 col-sm-8">
             <!-- Set up your HTML -->
           <div class="slick_slider">
+            @foreach ($sliderNews as $slidernews)
             <div class="single_iteam">
-              <a href="single_page.html"> <img src="{{asset('assets/img/slider_img4.jpg')}}" alt="img"></a>
+              <a href="single_page.html"> <img src="{{asset($slidernews->imagem)}}" alt="img"></a>
               <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
+              <h2><a class="slider_tittle" href="single_page.html">{{$slidernews->title}}</a></h2>
+                <p><?php echo $slidernews->min_description; ?></p>
               </div>
             </div>
-            <div class="single_iteam">
-              <a href="single_page.html"> <img src="{{asset('assets/img/slider_img2.jpg')}}" alt="img"></a>
-              <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-              </div>
-            </div>
-            <div class="single_iteam">
-              <a href="single_page.html"> <img src="{{asset('assets/img/slider_img3.jpg')}}" alt="img"></a>
-              <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-              </div>
-            </div>
-            <div class="single_iteam">
-              <a href="single_page.html"> <img src="{{asset('assets/img/slider_img1.jpg')}}" alt="img"></a>
-              <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
