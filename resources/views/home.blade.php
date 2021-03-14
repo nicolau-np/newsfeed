@@ -13,7 +13,7 @@
 
                   <figure class="bsbig_fig">
                     <a href="single_page.html" class="featured_img">
-                        <img alt="img" src="{{asset($getNegocios->first()->imagem)}}">
+                        <img alt="img" src="{{asset($getNegocios->first()->imagem)}}" style="height: 13em;">
                         <span class="overlay"></span>
                     </a>
                     <figcaption>
@@ -52,59 +52,37 @@
                 <h2><span>Moda</span></h2>              
                 <ul class="business_catgnav wow fadeInDown">
                   <li>
-                    <figure class="bsbig_fig">
+                     <figure class="bsbig_fig">
                       <a href="single_page.html" class="featured_img">
-                          <img alt="img" src="{{asset('assets/img/featured_img2.jpg')}}">
+                          <img alt="img" src="{{asset($getModa->first()->imagem)}}" style="height: 16.3em;">
                           <span class="overlay"></span>
                       </a>
                       <figcaption>
-                        <a href="single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a>
+                      <a href="single_page.html">{{$getModa->first()->title}}</a>
                       </figcaption>
-                        <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
-                    </figure>
+                        <p>
+                          <?php 
+                            echo $getModa->first()->min_description;
+                          ?>
+                        </p>
+                    </figure>  
+
                   </li>
                 </ul>
                 <ul class="spost_nav">
+
+              @foreach ($getModa as $moda)
                 <li>
                   <div class="media wow fadeInDown">
                     <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
+                      <img alt="img" src="{{asset($moda->imagem)}}">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                      <a href="single_page.html" class="catg_title">{{$moda->title}}</a>                        
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="media wow fadeInDown">
-                    <a href="single_page.html" class="media-left">
-                      <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                        
-                    </div>
-                  </div>
-                </li>
+              @endforeach
               </ul>
               </div>
             </div>
@@ -113,60 +91,38 @@
                 <h2><span>Tecnologia</span></h2>              
                 <ul class="business_catgnav">
                   <li>
+
                     <figure class="bsbig_fig wow fadeInDown">
                       <a href="single_page.html" class="featured_img">
-                          <img alt="img" src="{{asset('assets/img/featured_img3.jpg')}}">
+                          <img alt="img" src="{{asset($getTecnologia->first()->imagem)}}" style="height: 16.3em;">
                           <span class="overlay"></span>
                       </a>
                       <figcaption>
-                        <a href="single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a>
+                      <a href="single_page.html">{{$getTecnologia->first()->title}}</a>
                       </figcaption>
-                        <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
+                        <p>
+                          <?php 
+                            echo $getTecnologia->first()->min_description;
+                            ?>
+                        </p>
                     </figure>
+
                   </li>
                 </ul>
                 <ul class="spost_nav">
-                  <li>
+                  @foreach ($getTecnologia as $tecnologia)
+                    <li>
                     <div class="media wow fadeInDown">
                       <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
+                        <img alt="img" src="{{asset($tecnologia->imagem)}}">
                       </a>
                       <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                      <a href="single_page.html" class="catg_title">{{$tecnologia->title}}</a>                        
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                      
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                  @endforeach
+               </ul>
               </div>
             </div>
           </div>
@@ -174,60 +130,19 @@
           <!-- start photography stye design -->
           <div class="single_post_content">
             <h2><span>Galeria</span></h2>
-            <ul class="photograph_nav  wow fadeInDown">                
-              <li>
-                <div class="photo_grid">
-                  <figure class="effect-layla">
-                  <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset('assets/img/photograph_img2.jpg')}}" title="Photography Ttile 1">
-                  <img src="{{asset('assets/img/photograph_img2.jpg')}}" alt="img06"/></a>  
-                  </figure>
-                </div>
-              </li>
-              <li>
-                <div class="photo_grid">
-                  <figure class="effect-layla">
-                  <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset('assets/img/photograph_img3.jpg')}}" title="Photography Ttile 2">
-                    <img src="{{asset('assets/img/photograph_img3.jpg')}}" alt="img06"/>
-                    </a>  
-                  </figure>
-                </div>
-              </li>
-              <li>
-                <div class="photo_grid">
-                  <figure class="effect-layla">
-                  <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset('assets/img/photograph_img4.jpg')}}" title="Photography Ttile 3">
-                    <img src="{{asset('assets/img/photograph_img4.jpg')}}" alt="img06"/>
-                    </a>                        
-                  </figure>
-                </div>
-              </li>
-              <li>
-                <div class="photo_grid">
-                  <figure class="effect-layla">
-                     <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset('assets/img/photograph_img4.jpg')}}" title="Photography Ttile 4">
-                      <img src="{{asset('assets/img/photograph_img4.jpg')}}" alt="img06"/>
-                    </a>                           
-                  </figure>
-                </div>
-              </li>                
-              <li>
-                <div class="photo_grid">
-                  <figure class="effect-layla">
-                   <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset('assets/img/photograph_img2.jpg')}}" title="Photography Ttile 5">
-                      <img src="{{asset('assets/img/photograph_img2.jpg')}}" alt="img06"/>
-                    </a>                          
-                  </figure>
-                </div>
-              </li>
-              <li>
-                <div class="photo_grid">
-                  <figure class="effect-layla">
-                     <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset('assets/img/photograph_img3.jpg')}}" title="Photography Ttile 6">
-                      <img src="{{asset('assets/img/photograph_img3.jpg')}}" alt="img06"/>
-                    </a>                           
-                  </figure>
-                </div>
-              </li>
+            <ul class="photograph_nav  wow fadeInDown"> 
+                @foreach ($getGaleria as $galeria)
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla">
+                    <a class="fancybox-buttons" data-fancybox-group="button" href="{{asset($galeria->imagem)}}" title="Photography Ttile 1">
+                    <img src="{{asset($galeria->imagem)}}" alt="{{$galeria->title}}"/></a>  
+                    </figure>
+                  </div>
+                </li>
+                @endforeach             
+              
+            
             </ul>            
           </div>
           <!-- End photography stye design -->
