@@ -114,7 +114,28 @@ class PostPublicitarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $post_publicitario = PostPublicitario::find($id);
+        if(!$post_publicitario){
+            return back()->with(['error'=>"Nao encontrou publicidade"]);
+        }
+
+        $request->validate([
+            'titulo' => ['required', 'string', 'min:5', 'max:255'],
+            'estado' => ['required', 'string', 'min:1', 'max:4'],
+            'link' => ['required', 'string'],
+            'linkImg' => ['required', 'string'],
+        ]);
+
+        $data = [
+            'titulo' => $request->titulo,
+            'link' => $request->link,
+            'linkImg' => $request->linkImg,
+            'estado' => $request->estado,
+        ];
+
+        if (PostPublicitario::find($id)->update($data)) {
+            return back()->with(['success' => "Feito com sucesso"]);
+        }
     }
 
     /**
