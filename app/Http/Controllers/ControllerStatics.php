@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Noticia;
+use App\PostPublicitario;
 use Illuminate\Http\Request;
 
 class ControllerStatics extends Controller
@@ -65,8 +66,13 @@ class ControllerStatics extends Controller
     }
 
     public static function sliderNews(){
-        $last_news = Noticia::where('estado', "on")->inRandomOrder()->limit(20)->get();;
-        return $last_news;
+        $sliders_news = Noticia::where('estado', "on")->inRandomOrder()->limit(20)->get();
+        return $sliders_news;
+    }
+
+    public static function getBanners(){
+        $banners = PostPublicitario::where('estado', "on")->inRandomOrder()->limit(1)->get();
+        return $banners;
     }
 
 }

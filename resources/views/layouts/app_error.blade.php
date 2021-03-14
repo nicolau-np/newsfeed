@@ -2,6 +2,7 @@
 use App\Http\Controllers\ControllerStatics;
 $dia_semana = ControllerStatics::converterDiaSemana(date('N'));
 $mes = ControllerStatics::converteMes(date('m'));
+$banners = ControllerStatics::getBanners();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +93,10 @@ $mes = ControllerStatics::converteMes(date('m'));
                 </a> 
               </div>
               <div class="add_banner">
-                <a href="#"><img src="https://news.bitcoin.com/wp-content/uploads/2017/01/Standard-Cashback-Banner-728x90-GIF.gif" alt="img"></a>
+                @foreach ($banners as $banner)
+              <a href="{{$banner->link}}"><img src="{{$banner->linkImg}}" alt="img"></a>
+                @endforeach
+               
               </div>
             </div>
           </div>

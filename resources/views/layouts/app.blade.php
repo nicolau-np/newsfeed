@@ -4,6 +4,7 @@ $dia_semana = ControllerStatics::converterDiaSemana(date('N'));
 $mes = ControllerStatics::converteMes(date('m'));
 $last_news = ControllerStatics::getLastNews();
 $sliderNews = ControllerStatics::sliderNews();
+$banners = ControllerStatics::getBanners();
 ?>
 
 <!DOCTYPE html>
@@ -96,7 +97,10 @@ $sliderNews = ControllerStatics::sliderNews();
             </div>
             <!-- banner_728x90.gif-->
             <div class="add_banner">
-              <a href="#"><img src="https://thumbs.gfycat.com/AnchoredPointedBluebird-size_restricted.gif" alt="img"></a>
+              @foreach ($banners as $banner)
+            <a href="{{$banner->link}}"><img src="{{$banner->linkImg}}" alt="img"></a>
+              @endforeach
+             
             </div>
           </div>
         </div>
