@@ -107,11 +107,11 @@ $mes = ControllerStatics::converteMes(date('m'));
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav main_nav">
-            <li class="active"><a href="home.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
+            <li class="active"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Principal</span></a></li>
             <li><a href="#">Política</a></li>   
             <li><a href="#">Tecnologia</a></li> 
             <li><a href="#">Desporto</a></li> 
-            <li><a href="contact.html">Contactar</a></li>
+            <li><a href="/contact">Contactar</a></li>
           </ul>           
         </div><!--/.nav-collapse -->      
       </nav>
@@ -152,6 +152,7 @@ $mes = ControllerStatics::converteMes(date('m'));
     </section>
 	
     <!-- start slider section -->
+    @if ($menu=="Home")
     <section id="sliderSection">
       <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
@@ -250,6 +251,8 @@ $mes = ControllerStatics::converteMes(date('m'));
         </div>
       </div>
     </section><!-- End slider section -->
+    @endif
+   
      <!-- =========================
       //////////////This Theme Design and Developed //////////////////////
       //////////// by www.wpfreeware.com======================-->

@@ -28,7 +28,7 @@
                   <li>
                     <div class="media wow fadeInDown">
                       <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img1.jpg">
+                        <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
                       </a>
                       <div class="media-body">
                         <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
@@ -38,7 +38,7 @@
                   <li>
                     <div class="media wow fadeInDown">
                       <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img2.jpg">
+                        <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
                       </a>
                       <div class="media-body">
                         <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
@@ -48,7 +48,7 @@
                   <li>
                     <div class="media wow fadeInDown">
                       <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img1.jpg">
+                        <img alt="img" src="{{asset('assets/img/post_img1.jpg')}}">
                       </a>
                       <div class="media-body">
                         <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
@@ -58,7 +58,7 @@
                   <li>
                     <div class="media wow fadeInDown">
                       <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img2.jpg">
+                        <img alt="img" src="{{asset('assets/img/post_img2.jpg')}}">
                       </a>
                       <div class="media-body">
                         <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
