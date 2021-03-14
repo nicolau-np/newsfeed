@@ -61,4 +61,19 @@ class HomeController extends Controller
         ];
         return view('contact', $data);
     }
+
+    public function single_page($id){
+        $noticia = Noticia::find($id);
+        if(!$noticia){
+            return back()->with(['error'=>"Não encontrou notícia"]);
+        }
+        $data = [
+            'title' => $noticia->title,
+            'menu' => $noticia->title,
+            'submenu' => null,
+            'type' => "single_page",
+
+        ];
+        return view('single_page', $data);
+    }
 }

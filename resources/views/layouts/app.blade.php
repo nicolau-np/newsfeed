@@ -173,9 +173,9 @@ $last_pub = ControllerStatics::getLasPub();
           <div class="slick_slider">
             @foreach ($sliderNews as $slidernews)
             <div class="single_iteam">
-              <a href="single_page.html"> <img src="{{asset($slidernews->imagem)}}" alt="img"></a>
+            <a href="/single_page/{{$slidernews->id}}"> <img src="{{asset($slidernews->imagem)}}" alt="img"></a>
               <div class="slider_article">
-              <h2><a class="slider_tittle" href="single_page.html">{{$slidernews->title}}</a></h2>
+              <h2><a class="slider_tittle" href="/single_page/{{$slidernews->id}}">{{$slidernews->title}}</a></h2>
                 <p><?php echo $slidernews->min_description; ?></p>
               </div>
             </div>
@@ -191,11 +191,11 @@ $last_pub = ControllerStatics::getLasPub();
                 @foreach ($last_pub as $lastpub)
                     <li>
                   <div class="media">
-                    <a href="single_page.html" class="media-left">
+                    <a href="/single_page/{{$lastpub->id}}" class="media-left">
                     <img alt="{{$lastpub->title}}" src="{{asset($lastpub->imagem)}}">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> {{$lastpub->title}}</a>                        
+                      <a href="/single_page/{{$lastpub->id}}" class="catg_title"> {{$lastpub->title}}</a>                        
                     </div>
                   </div>
                 </li>
