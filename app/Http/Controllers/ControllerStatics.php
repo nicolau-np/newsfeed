@@ -65,6 +65,11 @@ class ControllerStatics extends Controller
         return $last_news;
     }
 
+    public static function getLastNewsCategory($id_categoria){
+        $last_newsCategory = Noticia::where(['estado'=>"on", 'id_categoria'=>$id_categoria])->orderBy('id', 'desc')->limit(6)->get();
+        return $last_newsCategory;
+    }
+
     public static function sliderNews(){
         $sliders_news = Noticia::where('estado', "on")->inRandomOrder()->limit(20)->get();
         return $sliders_news;

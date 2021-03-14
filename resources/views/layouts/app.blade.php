@@ -6,6 +6,9 @@ $last_news = ControllerStatics::getLastNews();
 $sliderNews = ControllerStatics::sliderNews();
 $banners = ControllerStatics::getBanners();
 $last_pub = ControllerStatics::getLasPub();
+if($type=="category"){
+  $last_newsCategory = ControllerStatics::getLastNewsCategory($getCategoria->id);
+}
 ?>
 
 <!DOCTYPE html>
@@ -140,12 +143,24 @@ $last_pub = ControllerStatics::getLasPub();
       <div class="row">
         <div class="col-lg-12 col-md-12">
            <!-- start news sticker -->
-          <div class="latest_newsarea">      
+          <div class="latest_newsarea"> 
+            @if ($type=="category")
+            <span>Últimas {{$getCategoria->categoria}}</span>
+            @else
             <span>Últimas notícias</span>
+            @endif     
+
             <ul id="ticker01" class="news_sticker">
-              @foreach ($last_news as $last)
+              @if ($type=="category")
+              @foreach ($last_newsCategory as $last)
               <li><a href="#"><img src="{{asset($last->imagem)}}" alt="{{$last->title}}">{{$last->title}}</a></li> 
               @endforeach
+              @else   
+                @foreach ($last_news as $last)
+              <li><a href="#"><img src="{{asset($last->imagem)}}" alt="{{$last->title}}">{{$last->title}}</a></li> 
+              @endforeach
+              @endif
+             
             </ul>
             <div class="social_area">
               <ul class="social_nav">
@@ -184,10 +199,13 @@ $last_pub = ControllerStatics::getLasPub();
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="latest_post">
-            <h2><span>Últimas publicações</span></h2>
+            <h2>
+              <span>Últimas publicações</span>
+            </h2>
             <div class="latest_post_container">
               <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
               <ul class="latest_postnav">
+                
                 @foreach ($last_pub as $lastpub)
                     <li>
                   <div class="media">

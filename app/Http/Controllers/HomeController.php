@@ -100,6 +100,7 @@ class HomeController extends Controller
             'submenu' => null,
             'type' => "category",
             'getNoticias' => $noticias,
+            'getCategoria'=>$categoriaLis,
         ];
         return view('category', $data);
     }
