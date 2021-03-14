@@ -8,6 +8,8 @@ $banners = ControllerStatics::getBanners();
 $last_pub = ControllerStatics::getLasPub();
 if($type=="category"){
   $last_newsCategory = ControllerStatics::getLastNewsCategory($getCategoria->id);
+  $sliderNewsCategory = ControllerStatics::sliderNewsCategory($getCategoria->id);
+  $last_pubCategory =ControllerStatics::getLasPubCategory($getCategoria->id); 
 }
 ?>
 
@@ -186,6 +188,17 @@ if($type=="category"){
         <div class="col-lg-8 col-md-8 col-sm-8">
             <!-- Set up your HTML -->
           <div class="slick_slider">
+            @if ($type=="category")
+            @foreach ($sliderNewsCategory as $slidernews)
+            <div class="single_iteam">
+            <a href="/single_page/{{$slidernews->id}}"> <img src="{{asset($slidernews->imagem)}}" alt="img"></a>
+              <div class="slider_article">
+              <h2><a class="slider_tittle" href="/single_page/{{$slidernews->id}}">{{$slidernews->title}}</a></h2>
+                <p><?php echo $slidernews->min_description; ?></p>
+              </div>
+            </div>
+            @endforeach
+            @else
             @foreach ($sliderNews as $slidernews)
             <div class="single_iteam">
             <a href="/single_page/{{$slidernews->id}}"> <img src="{{asset($slidernews->imagem)}}" alt="img"></a>
@@ -195,6 +208,8 @@ if($type=="category"){
               </div>
             </div>
             @endforeach
+            @endif
+            
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -205,19 +220,34 @@ if($type=="category"){
             <div class="latest_post_container">
               <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
               <ul class="latest_postnav">
-                
+                @if ($type == "category")
+                @foreach ($last_pubCategory as $lastpub)
+                <li>
+              <div class="media">
+                <a href="/single_page/{{$lastpub->id}}" class="media-left">
+                <img alt="{{$lastpub->title}}" src="{{asset($lastpub->imagem)}}">
+                </a>
+                <div class="media-body">
+                  <a href="/single_page/{{$lastpub->id}}" class="catg_title"> {{$lastpub->title}}</a>                        
+                </div>
+              </div>
+            </li>
+            @endforeach
+                @else
                 @foreach ($last_pub as $lastpub)
-                    <li>
-                  <div class="media">
-                    <a href="/single_page/{{$lastpub->id}}" class="media-left">
-                    <img alt="{{$lastpub->title}}" src="{{asset($lastpub->imagem)}}">
-                    </a>
-                    <div class="media-body">
-                      <a href="/single_page/{{$lastpub->id}}" class="catg_title"> {{$lastpub->title}}</a>                        
-                    </div>
-                  </div>
-                </li>
-                @endforeach
+                <li>
+              <div class="media">
+                <a href="/single_page/{{$lastpub->id}}" class="media-left">
+                <img alt="{{$lastpub->title}}" src="{{asset($lastpub->imagem)}}">
+                </a>
+                <div class="media-body">
+                  <a href="/single_page/{{$lastpub->id}}" class="catg_title"> {{$lastpub->title}}</a>                        
+                </div>
+              </div>
+            </li>
+            @endforeach
+                @endif
+               
                </ul>
              <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
             </div>

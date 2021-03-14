@@ -75,6 +75,11 @@ class ControllerStatics extends Controller
         return $sliders_news;
     }
 
+    public static function sliderNewsCategory($id_categoria){
+        $sliders_newsCategory = Noticia::where(['estado'=>"on", 'id_categoria'=>$id_categoria])->inRandomOrder()->limit(20)->get();
+        return $sliders_newsCategory;
+    }
+
     public static function getBanners(){
         $banners = PostPublicitario::where('estado', "on")->inRandomOrder()->limit(1)->get();
         return $banners;
@@ -83,6 +88,11 @@ class ControllerStatics extends Controller
     public static function getLasPub(){
         $last_pub = Noticia::where('estado', "on")->orderBy('id', 'desc')->limit(5)->get();
         return $last_pub;
+    }
+
+    public static function getLasPubCategory($id_categoria){
+        $last_pubCategory = Noticia::where(['estado'=>"on", 'id_categoria'=>$id_categoria])->orderBy('id', 'desc')->limit(5)->get();
+        return $last_pubCategory;
     }
 
 }
