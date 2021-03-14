@@ -16,42 +16,43 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $getNegocios = Noticia::whereHas('categoria', function($query){
+        $getNegocios = Noticia::whereHas('categoria', function ($query) {
             $query->where('categoria', "Negocios");
         })->where('estado', "on")->limit(4)->get()->sortByDesc('id');
 
-        $getModa = Noticia::whereHas('categoria', function($query){
+        $getModa = Noticia::whereHas('categoria', function ($query) {
             $query->where('categoria', "Moda");
         })->where('estado', "on")->limit(4)->get()->sortByDesc('id');
 
-        $getTecnologia = Noticia::whereHas('categoria', function($query){
+        $getTecnologia = Noticia::whereHas('categoria', function ($query) {
             $query->where('categoria', "Tecnologia");
         })->where('estado', "on")->limit(4)->get()->sortByDesc('id');
 
-        $getJogos = Noticia::whereHas('categoria', function($query){
+        $getJogos = Noticia::whereHas('categoria', function ($query) {
             $query->where('categoria', "Jogos");
         })->where('estado', "on")->limit(4)->get()->sortByDesc('id');
 
         $categorias = Categoria::where('estado', 'on')->get();
-        
+
         $galeria = Noticia::orderBy('id', 'desc')->limit(6)->get();
-  
+
         $data = [
             'title' => "angoNews",
             'menu' => "Home",
             'submenu' => null,
             'type' => "home",
-            'getNegocios'=>$getNegocios,
-            'getModa'=>$getModa,
-            'getTecnologia'=>$getTecnologia,
-            'getJogos'=>$getJogos,
-            'getGaleria'=>$galeria,
-            'getCategorias'=>$categorias,
+            'getNegocios' => $getNegocios,
+            'getModa' => $getModa,
+            'getTecnologia' => $getTecnologia,
+            'getJogos' => $getJogos,
+            'getGaleria' => $galeria,
+            'getCategorias' => $categorias,
         ];
         return view('home', $data);
     }
 
-    public function contact(){
+    public function contact()
+    {
         $data = [
             'title' => "Contactar",
             'menu' => "Contactar",
@@ -62,25 +63,31 @@ class HomeController extends Controller
         return view('contact', $data);
     }
 
-    public function single_page($id){
+    public function single_page($id)
+    {
         $noticia = Noticia::find($id);
-        if(!$noticia){
-            return back()->with(['error'=>"Não encontrou notícia"]);
+        if (!$noticia) {
+            return back()->with(['error' => "Não encontrou notícia"]);
         }
-        $publicacoes_relacionadas = Noticia::whereHas('categoria', function($query)use($noticia){
+        $publicacoes_relacionadas = Noticia::whereHas('categoria', function ($query) use ($noticia) {
             $query->where('categoria', $noticia->categoria->categoria);
-        })->where('estado',"on")->where('id','!=',$noticia->id)->inRandomOrder()->limit(3)->get();
-        
+        })->where('estado', "on")->where('id', '!=', $noticia->id)->inRandomOrder()->limit(3)->get();
+
         $categorias = Categoria::where('estado', 'on')->get();
         $data = [
             'title' => $noticia->title,
             'menu' => $noticia->title,
             'submenu' => null,
             'type' => "single_page",
-            'getNoticia'=>$noticia,
-            'getCategorias'=>$categorias,
-            'getNoticiasRelacionadas'=>$publicacoes_relacionadas,
+            'getNoticia' => $noticia,
+            'getCategorias' => $categorias,
+            'getNoticiasRelacionadas' => $publicacoes_relacionadas,
         ];
         return view('single_page', $data);
+    }
+
+    public function category($categoria)
+    {
+        
     }
 }

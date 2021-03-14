@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "HomeController@index");
 Route::get('/contact', "HomeController@contact");
+Route::get('/category/{categoria}', "HomeController@category");
 Route::get('/single_page/{id_noticia}', "HomeController@single_page");
+
 
 Route::get('/login', "UserController@login")->name('login');
 Route::post('/logar', "UserController@logar")->name('logar');

@@ -20,7 +20,7 @@ class CategoriaSeeder extends Seeder
             'categoria' => "Moda",
             'estado' => "on",
         ], [
-            'categoria' => "Negocios",
+            'categoria' => "Negócios",
             'estado' => "on",
         ], [
             'categoria' => "Jogos",
