@@ -37,10 +37,9 @@ $pub_populares = ControllerStatics::getPubPopulares();
                 <div class="social_link">
                   <ul class="sociallink_nav">
                   <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="https://twitter.com/intent/tweet?url={{url()->current()}}&text="><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{url()->current()}}"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://pinterest.com/pin/create/button/?url={{url()->current()}}&media=&description="><i class="fa fa-pinterest"></i></a></li>
                   </ul>
                 </div>
                 
