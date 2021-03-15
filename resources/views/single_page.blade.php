@@ -36,13 +36,14 @@ $pub_populares = ControllerStatics::getPubPopulares();
                 </div>
                 <div class="social_link">
                   <ul class="sociallink_nav">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                   </ul>
                 </div>
+                
                 <div class="related_post">
                   <h2>Publicações Relacionadas <i class="fa fa-thumbs-o-up"></i></h2>
                   <ul class="spost_nav wow fadeInDown animated">
