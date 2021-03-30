@@ -1,3 +1,7 @@
+<?php 
+use App\Http\Controllers\ControllerStatics;
+$pub_populares = ControllerStatics::getPubPopulares();
+?>
 <div class="single_sidebar">
             <h2><span>Publicações populares</span></h2>
             <ul class="spost_nav">
