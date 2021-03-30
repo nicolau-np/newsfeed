@@ -22,6 +22,11 @@ if($type=="category"){
     <meta name="description" content="angoNews">
     <meta name="keywords" content="angoNews, fique actualizado das novas notícias">
     <meta name="author" content="Nicolau NP">
+    @if ($type=="single_page")
+  <meta property="og:title" content="{{$getNoticia->title}}" />
+  <meta property="og:description" content="{{$getNoticia->min_description}}" />
+  <meta property="og:image" content="{{asset($getNoticia->imagem)}}" />
+    @endif
   <title>{{$title}}</title>
     <link rel="shortcut icon" href="{{asset('assets/img/logonews.png')}}" type="image/x-icon" />
       <link rel="apple-touch-icon" href="{{asset('assets/img/logonews.png')}}" />
