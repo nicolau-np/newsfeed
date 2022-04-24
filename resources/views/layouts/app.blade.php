@@ -119,18 +119,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
                         </div>
                         <!-- banner_728x90.gif-->
                         <div class="add_banner">
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6337182541384408"
-                            crossorigin="anonymous"></script>
-                       <!-- anuncio1 -->
-                       <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-6337182541384408"
-                            data-ad-slot="1775318738"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                       <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                       </script>
+                      
 
                         </div>
                     </div>

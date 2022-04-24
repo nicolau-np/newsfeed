@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 @section('content')
-    
+
     <!-- ==================start content body section=============== -->
     <section id="contentSection">
         <div class="row">
@@ -13,6 +13,18 @@
                     <li><a href="#" class="active">{{$getNoticia->categoria->categoria}}</a></li>
                  </ol>
                 <h1>{{$getNoticia->title}}</h1>
+                <div class="banner">
+                       <!-- anuncio1 -->
+                       <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-6337182541384408"
+                            data-ad-slot="1775318738"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                       <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                       </script>
+                </div>
                 <div class="post_commentbox">
                   <a href="#"><i class="fa fa-user"></i>angoNews</a>
                   <span><i class="fa fa-calendar"></i>{{date('d-m-Y', strtotime($getNoticia->created_at))}} {{date('H:i', strtotime($getNoticia->created_at))}}</span>
@@ -21,15 +33,15 @@
                 <div class="single_page_content">
                 <img class="img-center" src="{{asset($getNoticia->imagem)}}" alt="{{$getNoticia->title}}">
                   <p>
-                    <?php 
+                    <?php
                     echo $getNoticia->description;
                     ?>
                   </p>
                   <blockquote>
-                    <?php 
+                    <?php
                         echo $getNoticia->min_description;
                     ?>
-                  
+
                 </div>
                 <div class="social_link">
                   <ul class="sociallink_nav">
@@ -39,7 +51,7 @@
                     <li><a href="https://pinterest.com/pin/create/button/?url={{url()->current()}}&media=&description="><i class="fa fa-pinterest"></i></a></li>
                   </ul>
                 </div>
-                
+
                 <div class="related_post">
                   <h2>Publicações Relacionadas <i class="fa fa-thumbs-o-up"></i></h2>
                   <ul class="spost_nav wow fadeInDown animated">
@@ -50,16 +62,16 @@
                         <img src="{{asset($relacionadas->imagem)}}" alt="{{$relacionadas->title}}">
                         </a>
                         <div class="media-body">
-                          <a class="catg_title" href="/single_page/{{$relacionadas->id}}">{{$relacionadas->title}}</a>                        
+                          <a class="catg_title" href="/single_page/{{$relacionadas->id}}">{{$relacionadas->title}}</a>
                         </div>
                       </div>
                     </li>
                     @endforeach
-                    
+
 
                   </ul>
                 </div>
-              </div>            
+              </div>
             </div>
           </div>
           <nav class="nav-slit">
@@ -87,7 +99,7 @@
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Categoria</a></li>
                   <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
-                  
+
                 </ul>
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="category">
@@ -97,9 +109,9 @@
                         @endforeach
                     </ul>
                   </div>
-                
-                 
-                </div>            
+
+
+                </div>
               </div>
               <!-- End tab section -->
               <!-- sponsor add -->
@@ -131,13 +143,13 @@
               <!-- End sponsor add -->
             </aside>
           </div>
-        </div>  
+        </div>
       </section>
-      <!-- ==================End content body section=============== -->    
-  
+      <!-- ==================End content body section=============== -->
+
 @endsection
 
 
- 
+
 
 
