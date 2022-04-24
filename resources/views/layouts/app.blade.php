@@ -119,7 +119,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
                         </div>
                         <!-- banner_728x90.gif-->
                         <div class="add_banner">
-                      
+                            
 
                         </div>
                     </div>
