@@ -20,8 +20,8 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="angoNews">
-    <meta name="keywords" content="angoNews, fique actualizado das novas notícias">
+    <meta name="description" content="Sige Okussoleka o seu blog de notícias angolanas e além fronteira trazemos para sí e sua família o melhor dos acontecimentos em torno do nosso planeta TERRA. Fique actualizado das novas notícias">
+    <meta name="keywords" content="sigeokussoleka, SigeOkussoleka, Sige Okussoleka, SIGE, SIGE OKUSSOLEKA, angoNews, Sige News, SigeNews, SIGE NEWS, NEWS, news,">
     <meta name="author" content="Nicolau NP">
     @if ($type == 'single_page')
         <meta property="og:title" content="{{ $getNoticia->title }}" />
@@ -69,6 +69,8 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
         }
 
     </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6337182541384408"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -111,14 +113,23 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
               </a> -->
                             <!-- for your text logo format -->
                             <a href="#" class="logo">
-                                ango <span>News</span>
+                                sige <span>News</span>
                             </a>
                         </div>
                         <!-- banner_728x90.gif-->
                         <div class="add_banner">
-                            @foreach ($banners as $banner)
-                                <a href="{{ $banner->link }}"><img src="{{ $banner->linkImg }}" alt="img"></a>
-                            @endforeach
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6337182541384408"
+                            crossorigin="anonymous"></script>
+                       <!-- anuncio1 -->
+                       <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-6337182541384408"
+                            data-ad-slot="1775318738"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                       <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                       </script>
 
                         </div>
                     </div>
