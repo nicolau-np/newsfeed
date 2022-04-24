@@ -43,6 +43,20 @@
                     ?>
 
                 </div>
+
+                <div class="banner">
+                    <!-- anuncio1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-6337182541384408"
+                         data-ad-slot="1775318738"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+             </div>
+
                 <div class="social_link">
                   <ul class="sociallink_nav">
                   <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}"><i class="fa fa-facebook"></i></a></li>
@@ -117,7 +131,20 @@
               <!-- sponsor add -->
               <div class="single_sidebar wow fadeInDown">
                 <h2><span>Patrocinador</span></h2>
-                <a class="sideAdd" href="#"><img src="{{asset('assets/img/add_img.jpg')}}" alt="img"></a>
+                <a class="sideAdd" href="#">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6337182541384408"
+                    crossorigin="anonymous"></script>
+               <!-- anuncio lateral -->
+               <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-6337182541384408"
+                    data-ad-slot="6433830615"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+                </a>
               </div>
               <!-- End sponsor add -->
                <!-- Category Archive -->
