@@ -23,6 +23,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     <meta name="description" content="Sige Okussoleka o seu blog de notícias angolanas e além fronteira trazemos para sí e sua família o melhor dos acontecimentos em torno do nosso planeta TERRA. Fique actualizado das novas notícias">
     <meta name="keywords" content="sigeokussoleka, SigeOkussoleka, Sige Okussoleka, SIGE, SIGE OKUSSOLEKA, angoNews, Sige News, SigeNews, SIGE NEWS, NEWS, news,">
     <meta name="author" content="Nicolau NP">
+    <meta name="google-site-verification" content="hXy6FR8P_HZz-DhKfcQR5GRiiMq30TUEvnKl3NQgNLk" />
     @if ($type == 'single_page')
         <meta property="og:title" content="{{ $getNoticia->title }}" />
         <meta property="og:description" content="{{ $getNoticia->min_description }}" />

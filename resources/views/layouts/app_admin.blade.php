@@ -11,7 +11,8 @@
 <link rel="stylesheet" href="{{asset('assets/css/style_form.css')}}">
 <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.css')}}">
 <title>{{$title}}</title>
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6337182541384408"
+crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -35,17 +36,17 @@
               </nav>
         </div>
         @endif
-      
-    
+
+
         <div class="content">
             @yield('content')
         </div>
-    
+
         <div class="rodape">
-    
-        </div>  
+
+        </div>
     </div>
- 
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.esm.min.js"></script>
@@ -68,8 +69,8 @@ $('.textarea').summernote({
       ]
     });
   });
-    
- 
+
+
 </script>
 </body>
 </html>
