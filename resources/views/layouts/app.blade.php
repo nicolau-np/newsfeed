@@ -20,8 +20,10 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sige Okussoleka o seu blog de notícias angolanas e além fronteira trazemos para sí e sua família o melhor dos acontecimentos em torno do nosso planeta TERRA. Fique actualizado das novas notícias">
-    <meta name="keywords" content="sigeokussoleka, SigeOkussoleka, Sige Okussoleka, SIGE, SIGE OKUSSOLEKA, angoNews, Sige News, SigeNews, SIGE NEWS, NEWS, news,">
+    <meta name="description"
+        content="Sige Okussoleka o seu blog de notícias angolanas e além fronteira trazemos para sí e sua família o melhor dos acontecimentos em torno do nosso planeta TERRA. Fique actualizado das novas notícias">
+    <meta name="keywords"
+        content="sigeokussoleka, SigeOkussoleka, Sige Okussoleka, SIGE, SIGE OKUSSOLEKA, angoNews, Sige News, SigeNews, SIGE NEWS, NEWS, news,">
     <meta name="author" content="Nicolau NP">
     <meta name="google-site-verification" content="hXy6FR8P_HZz-DhKfcQR5GRiiMq30TUEvnKl3NQgNLk" />
     @if ($type == 'single_page')
@@ -70,8 +72,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
         }
 
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6337182541384408"
-    crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -119,7 +120,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
                         </div>
                         <!-- banner_728x90.gif-->
                         <div class="add_banner">
-                            
+
 
                         </div>
                     </div>
@@ -143,7 +144,8 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
                     <ul class="nav navbar-nav main_nav">
                         <li class="@if ($menu=='Home' ) active @endif">
                             <a href="/"><span class="fa fa-home desktop-home"></span><span
-                                    class="mobile-show">Principal</span></a></li>
+                                    class="mobile-show">Principal</span></a>
+                        </li>
                         <li class="@if ($menu=='Política' ) active @endif"><a href="/category/Política">Política</a></li>
                         <li class="@if ($menu=='Tecnologia' ) active @endif"><a href="/category/Tecnologia">Tecnologia</a></li>
                         <li class="@if ($menu=='Desporto' ) active @endif"><a href="/category/Desporto">Desporto</a></li>
@@ -358,7 +360,12 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->
 
+    <script type="text/javascript">
+        var infolinks_pid = 3364430;
+        var infolinks_wsid = 0;
 
+    </script>
+    <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 
 </html>
