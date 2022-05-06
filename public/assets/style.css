@@ -4,7 +4,7 @@ Template URI: http://www.wpfreeware.com/newsfeed-ultra-responsive-news-magazine-
 Author: WpFreeware
 Author URI: http://www.wpfreeware.com
 Description: A Pro bootstrap html5 css3 responsive news magazine website template
-Version: 1.0 
+Version: 1.0
 License: GPL 2.0 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,10 +26,10 @@ ul{
   list-style: none;
 }
 
-a{ 
+a{
   text-decoration: none;
   color: #2f2f2f;
-  
+
 }
 a:hover{
   color: #646464;
@@ -42,7 +42,7 @@ a:focus{
 h1,h2,h3,h4,h5,h6{
  font-family: 'Oswald', sans-serif;
 }
-h2{ 
+h2{
   line-height: 23px;
 }
 img{
@@ -54,16 +54,16 @@ img:hover{
 .img-center {
   display: block;
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto;
   text-align: center;
 }
 .img-right{
   display: block;
-  margin-left: auto;  
+  margin-left: auto;
 }
 .img-left {
-  display: block; 
-  margin-right: auto;  
+  display: block;
+  margin-right: auto;
 }
 .yellow_bg{
   background-color: #ffd62c;
@@ -72,8 +72,8 @@ img:hover{
 /* <!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
-		
-		
+
+
 .btn-yellow{
   background-color: #ffd62c;
   color: #fff;
@@ -97,7 +97,7 @@ img:hover{
   transition: all 0.5s;
 }
 .btn:hover{
-  
+
 }
 .btn-red{
   background-color: red;
@@ -167,7 +167,7 @@ img:hover{
 /* <!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
-		
+
 .transition{
    -webkit-transition: all 0.5s; /* Ch, Saf  3.2 */
      -moz-transition: all 0.5s; /* 4 < Fx <16 */
@@ -201,13 +201,13 @@ img:hover{
 /*scrol to top*/
 
 .scrollToTop {
-  bottom: 105px;
+  bottom: 60px;
   display: none;
   font-size: 32px;
   font-weight: bold;
   height: 50px;
   position: fixed;
-  right: 75px;
+  right: 20px;
   text-align: center;
   text-decoration: none;
   width: 50px;
@@ -296,13 +296,13 @@ img:hover{
 /* <!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
-		
-		
+
+
 .logo{
   font-size: 45px;
   font-weight: bold;
   color: #000;
-  font-family: 'Varela', sans-serif; 
+  font-family: 'Varela', sans-serif;
 }
 .logo img{
   max-width: 100%;
@@ -310,7 +310,7 @@ img:hover{
 .logo img:hover{
   opacity: 1;
 }
-.logo > span {  
+.logo > span {
   margin-left: -14px;
 }
 .add_banner{
@@ -353,17 +353,17 @@ img:hover{
   border: none;
 }
 .navbar-inverse .navbar-nav > li > a:hover,.navbar-inverse .navbar-nav > li > a:focus{
-  
+
   color: #fff;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  
+
   color: #fff;
 }
 .main-nav ul li a {
-  
+
 }
-.navbar-collapse {  
+.navbar-collapse {
   padding-left: 0px;
 }
 .mobile-show{
@@ -390,11 +390,11 @@ img:hover{
   transition: all 0.5s;
 }
 .dropdown-menu > li > a:hover,.dropdown-menu > li > a:focus{
-  color: #fff; 
+  color: #fff;
 }
 
 #newsSection{
-  float: left;  
+  float: left;
   display: inline;
   width: 100%;
   padding: 0px 30px;
@@ -411,8 +411,8 @@ img:hover{
 /* <!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
-		
-		
+
+
 .latest_newsarea span {
   color: #fff;
   font-family: Oswald,sans-serif;
@@ -451,14 +451,14 @@ img:hover{
   border-left: 1px solid #ccc;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;  
+  -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 .social_nav li.facebook a{
   background-image: url("img/socials.png");
   background-position: 0 -30px;
-  background-size: 270px 60px;  
+  background-size: 270px 60px;
 }
 .social_nav li.facebook a:hover{
   background-position: 0px 0px;
@@ -468,7 +468,7 @@ img:hover{
 .social_nav li.twitter a{
   background-image: url("img/socials.png");
   background-position: -30px -30px;
-  background-size: 270px 60px;  
+  background-size: 270px 60px;
 }
 .social_nav li.twitter a:hover{
   background-position: -30px 0px;
@@ -478,7 +478,7 @@ img:hover{
 .social_nav li.flickr a{
   background-image: url("img/socials.png");
   background-position: -60px -30px;
-  background-size: 270px 60px;  
+  background-size: 270px 60px;
 }
 .social_nav li.flickr a:hover{
   background-position: -60px 0px;
@@ -488,7 +488,7 @@ img:hover{
 .social_nav li.pinterest a{
   background-image: url("img/socials.png");
   background-position: -90px -30px;
-  background-size: 270px 60px;  
+  background-size: 270px 60px;
 }
 .social_nav li.pinterest a:hover{
   background-position: -90px 0px;
@@ -498,7 +498,7 @@ img:hover{
 .social_nav li.googleplus a{
   background-image: url("img/socials.png");
   background-position: -120px -30px;
-  background-size: 270px 60px;  
+  background-size: 270px 60px;
 }
 .social_nav li.googleplus a:hover{
   background-position: -120px 0px;
@@ -508,7 +508,7 @@ img:hover{
 .social_nav li.vimeo a{
   background-image: url("img/socials.png");
   background-position: -150px -30px;
-  background-size: 270px 60px;  
+  background-size: 270px 60px;
 }
 .social_nav li.vimeo a:hover{
   background-position: -150px 0px;
@@ -519,7 +519,7 @@ img:hover{
   background-image: url("img/socials.png");
   background-position: -180px -30px;
   background-size: 270px 60px;
-  width: 60px;  
+  width: 60px;
 }
 .social_nav li.youtube a:hover{
   background-position: -180px 0px;
@@ -529,8 +529,8 @@ img:hover{
 .social_nav li.mail a{
   background-image: url("img/socials.png");
   background-position: -240px -30px;
-  background-size: 270px 60px; 
-  width: 32px; 
+  background-size: 270px 60px;
+  width: 32px;
 }
 .social_nav li.mail a:hover{
   background-position: -240px 0px;
@@ -562,7 +562,7 @@ img:hover{
 /* <!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
-		
+
 .slider_article {
   bottom: 20px;
   left: 0;
@@ -653,7 +653,7 @@ img:hover{
   display: block;
 }
 #prev-button {
-  cursor: pointer;  
+  cursor: pointer;
   font-size: 20px;
   left: 0;
   position: absolute;
@@ -745,7 +745,7 @@ img:hover{
   float: left;
   display: inline;
   width: 100%;
-  min-height: 300px;  
+  min-height: 300px;
 }
 .spost_nav{}
 .spost_nav li{
@@ -766,12 +766,12 @@ img:hover{
   font-family: "Oswald",sans-serif;
 }
 .featured_img{
-  position: relative;  
+  position: relative;
 }
-.overlay:hover{  
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);    
+.overlay:hover{
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
 }
-.overlay {  
+.overlay {
   bottom: 0;
   display: block;
   left: 0;
@@ -783,7 +783,7 @@ img:hover{
   -mz-transition:  all 0.5s;
   -ms-transition:  all 0.5s;
   -o-transition:  all 0.5s;
-  transition:   all 0.5s; 
+  transition:   all 0.5s;
 }
 .fashion_technology_area {
   display: inline;
@@ -802,7 +802,7 @@ img:hover{
 }
 .photo_grid {
   position: relative;
-  margin: 0 auto; 
+  margin: 0 auto;
   max-width: 1000px;
   list-style: none;
   text-align: center;
@@ -943,9 +943,9 @@ figure.effect-layla h2 {
 }
 
 figure.effect-layla a {
-  
+
   text-transform: none;
-  
+
   -webkit-transform: translate3d(0,-10px,0);
   transform: translate3d(0,-10px,0);
 }
@@ -982,7 +982,7 @@ figure.effect-layla:hover h2{
 
 figure.effect-layla:hover h2,
 figure.effect-layla:hover a {
-  opacity: 1;  
+  opacity: 1;
   -webkit-transform: translate3d(0,-35px,0);
   transform: translate3d(0,-35px,0);
 }
@@ -1031,7 +1031,7 @@ figure.effect-layla:hover img {
   -mz-transition:  all 0.5s;
   -ms-transition:  all 0.5s;
   -o-transition:  all 0.5s;
-  transition:   all 0.5s; 
+  transition:   all 0.5s;
 }
 .cat-item a:hover{
   color: #fff;
@@ -1058,7 +1058,7 @@ figure.effect-layla:hover img {
   -mz-transition:  all 0.5s;
   -ms-transition:  all 0.5s;
   -o-transition:  all 0.5s;
-  transition:   all 0.5s; 
+  transition:   all 0.5s;
 }
 .nav-tabs > li > a:hover,.nav-tabs > li > a:focus{
   color: #fff !important;
@@ -1182,7 +1182,7 @@ figure.effect-layla:hover img {
   float: none;
   width: 32.55%;
 }
-.nav-tabs {  
+.nav-tabs {
   text-align: center;
 }
 /* <!-- =========================
@@ -1191,7 +1191,7 @@ figure.effect-layla:hover img {
 .pagination > li > a, .pagination > li > span {
   background-color: #000000;
   border: 1px solid #000;
-  color: #eee;  
+  color: #eee;
   margin-right: 5px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -1204,7 +1204,7 @@ figure.effect-layla:hover img {
 }
 .pagination > li:first-child > a, .pagination > li:first-child > span {
   border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px; 
+  border-top-left-radius: 0px;
 }
 .pagination > li:last-child > a, .pagination > li:last-child > span {
   border-bottom-right-radius: 0px;
@@ -1245,7 +1245,7 @@ figure.effect-layla:hover img {
 }
 .breadcrumb {
   background-color: #303030;
-  border-radius: 0; 
+  border-radius: 0;
 }
 .breadcrumb li a{
   color: #fff;
@@ -1322,7 +1322,7 @@ figure.effect-layla:hover img {
   -moz-transform: rotate(50deg);
   -ms-transform: rotate(50deg);
   -os-transform: rotate(50deg);
-  transform: rotate(50deg); 
+  transform: rotate(50deg);
 }
 .sociallink_nav li a:hover i{
    -webkit-transform: rotate(-50deg);
@@ -1352,7 +1352,7 @@ figure.effect-layla:hover img {
   float: left;
   margin-top: 0px;
   width: 100%;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 .related_post > h2 {
   border-bottom: 1px solid #e3e3e3;
@@ -1381,7 +1381,7 @@ figure.effect-layla:hover img {
 /* <!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
-		
+
 .nav-slit a.prev {
   left: 0;
 }
@@ -1392,7 +1392,7 @@ figure.effect-layla:hover img {
 .nav-slit .icon-wrap {
   position: relative;
   display: block;
-  padding: 45px 5px;  
+  padding: 45px 5px;
 }
 .nav-slit .icon-wrap i {
   color: #fff;
@@ -1430,9 +1430,9 @@ figure.effect-layla:hover img {
   top: 100%;
   margin: 0;
   padding: 0 20px;
-  height: 30%; 
+  height: 30%;
   color: #fff;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
   font-size: 0.75em;
@@ -1483,7 +1483,7 @@ figure.effect-layla:hover img {
   text-transform: uppercase;
 }
 .error_page > h1 {
-  font-size: 110px; 
+  font-size: 110px;
 }
 .error_page > p {
   font-size: 15px;
@@ -1546,38 +1546,38 @@ figure.effect-layla:hover img {
 
 
 @media(max-width:1199px ){
-  .logo_area {width: 34%;}	
+  .logo_area {width: 34%;}
   .add_banner {width: 580px;}
   .nav-tabs > li {width: 32.3%;}
   .photograph_nav li {width: 31.5%;}
 @media(max-width:991px ){
 	.add_banner {display: none;}
   .logo_area {width: 100%;}
-  .nav > li > a {padding: 8px 8px;} 
+  .nav > li > a {padding: 8px 8px;}
   .latest_post_container {height: 380px;overflow: hidden;}
   #next-button {bottom: -2px;}
   .single_iteam {height: 415px;}
   .photograph_nav li {width: 47.7%;}
   .related_post .spost_nav li {width: 100%;}
   .nav-tabs > li {width: 31.9%;}
-  .nav-tabs > li > a {font-size: 13px;padding-left: 0px !important;padding-right: 0px !important;text-align: center;} 
+  .nav-tabs > li > a {font-size: 13px;padding-left: 0px !important;padding-right: 0px !important;text-align: center;}
 
-  
+
 }
 
 @media(max-width:767px ){
- .navbar-collapse {padding-left: 15px;} 
+ .navbar-collapse {padding-left: 15px;}
  .mobile-show{display: block;}
  .desktop-home{display: none;}
  .navbar-inverse .navbar-nav > li > a {display: block;}
  .header_top_left {width: 100%;}
  .header_top_right > p {display: none;}
- .social_area{display: none;} 
+ .social_area{display: none;}
  .single_iteam a{height: 100%;}
  .single_iteam a>img{height: 100%;}
  .error_page > a {margin-bottom: 25px;}
  .nav-tabs > li {width: 32.6%;}
-  
+
 
 }
 
@@ -1607,8 +1607,18 @@ figure.effect-layla:hover img {
 	.sociallink_nav li a {padding: 5px 10px;}
   .sociallink_nav li:nth-child(1) > a {padding: 5px 13px;}
   .nav-tabs > li {width: 32.1%;}
-  
-	
+
+
+}
+
+
+@media(max-width:700px){
+    .container{
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
  /*<!-- =========================
         //////////////This Theme Design and Developed //////////////////////

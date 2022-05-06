@@ -365,7 +365,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
         var infolinks_wsid = 0;
 
     </script>
-    <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+   
 </body>
 
 </html>
