@@ -14,12 +14,12 @@
                         <h1>{{ $getNoticia->title }}</h1>
                         <div class="banner">
                             <!-- anuncio1 -->
-                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6337182541384408"
-                                data-ad-slot="1775318738" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-
-                            </script>
+                            <script type="text/javascript"
+                                src="https://udbaa.com/bnr.php?section=anuncio2&pub=329699&format=728x90&ga=g"></script>
+                            <noscript><a href="https://yllix.com/publishers/329699" target="_blank"><img
+                                        src="//ylx-aff.advertica-cdn.com/pub/728x90.png"
+                                        style="border:none;margin:0;padding:0;vertical-align:baseline;"
+                                        alt="ylliX - Online Advertising Network" /></a></noscript>
                         </div>
                         <div class="post_commentbox">
                             <a href="#"><i class="fa fa-user"></i>angoNews</a>
@@ -28,7 +28,8 @@
                             <a href="#"><i class="fa fa-tags"></i>{{ $getNoticia->categoria->categoria }}</a>
                         </div>
                         <div class="single_page_content">
-                            <img class="img-center" src="{{ asset($getNoticia->imagem) }}" alt="{{ $getNoticia->title }}">
+                            <img class="img-center" src="{{ asset($getNoticia->imagem) }}"
+                                alt="{{ $getNoticia->title }}">
                             <p>
                                 <?php echo $getNoticia->description; ?>
                             </p>
@@ -38,13 +39,13 @@
                         </div>
 
                         <div class="banner">
-                            annuncio
-                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6337182541384408"
-                                data-ad-slot="1775318738" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            <script type="text/javascript"
+                                src="https://udbaa.com/bnr.php?section=anuncio2&pub=329699&format=728x90&ga=g"></script>
+                            <noscript><a href="https://yllix.com/publishers/329699" target="_blank"><img
+                                        src="//ylx-aff.advertica-cdn.com/pub/728x90.png"
+                                        style="border:none;margin:0;padding:0;vertical-align:baseline;"
+                                        alt="ylliX - Online Advertising Network" /></a></noscript>
 
-                            </script>
                         </div>
 
                         <div class="social_link">
@@ -133,8 +134,12 @@
                     <div class="single_sidebar wow fadeInDown">
                         <h2><span>Patrocinador</span></h2>
                         <a class="sideAdd" href="#">
-                            <script type="text/javascript" src="https://udbaa.com/bnr.php?section=anuncio1&pub=329699&format=300x250&ga=g"></script>
-<noscript><a href="https://yllix.com/publishers/329699" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/300x250.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" alt="ylliX - Online Advertising Network" /></a></noscript>
+                            <script type="text/javascript"
+                                src="https://udbaa.com/bnr.php?section=anuncio1&pub=329699&format=300x250&ga=g"></script>
+                            <noscript><a href="https://yllix.com/publishers/329699" target="_blank"><img
+                                        src="//ylx-aff.advertica-cdn.com/pub/300x250.png"
+                                        style="border:none;margin:0;padding:0;vertical-align:baseline;"
+                                        alt="ylliX - Online Advertising Network" /></a></noscript>
                         </a>
                     </div>
                     <!-- End sponsor add -->
@@ -160,6 +165,14 @@
                     </div>
                     <!-- End sponsor add -->
                 </aside>
+                <div class="banner">
+                    <script type="text/javascript"
+                        src="https://udbaa.com/bnr.php?section=anuncio3&pub=329699&format=160x600&ga=g"></script>
+                    <noscript><a href="https://yllix.com/publishers/329699" target="_blank"><img
+                                src="//ylx-aff.advertica-cdn.com/pub/160x600.png"
+                                style="border:none;margin:0;padding:0;vertical-align:baseline;"
+                                alt="ylliX - Online Advertising Network" /></a></noscript>
+                </div>
             </div>
         </div>
     </section>
