@@ -49,5 +49,5 @@ Route::group(['prefix' => "admin", 'middleware' => "auth"], function () {
 
 Route::group(['prefix' => "tv"], function () {
     Route::get('/', "TvController@index");
-    Route::get('/view/{id}', "TvController@view");
+    Route::get('/view/{id}', "TvController@show");
 });
