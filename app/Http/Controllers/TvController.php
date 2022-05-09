@@ -29,7 +29,7 @@ class TvController extends Controller
         }
         $data = [
             'title' => $canals->canal,
-            'type' => "tv",
+            'type' => "showtv",
             'menu' => "Tv Online",
             'submenu' => "Assistir",
             'getCanal' => $canals,
