@@ -304,7 +304,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
         @yield('content')
         <!-- ==================End content body section=============== -->
 
-       
+
         <footer id="footer">
             <div class="footer_top">
                 <div class="row">
@@ -379,6 +379,16 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
         var infolinks_wsid = 0;
 
     </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRLE4LZB7D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRLE4LZB7D');
+</script>
 
 </body>
 
