@@ -22,27 +22,32 @@ Route::get('/single_page/{id_noticia}', "HomeController@single_page");
 Route::get('/login', "UserController@login")->name('login');
 Route::post('/logar', "UserController@logar")->name('logar');
 
-Route::group(['prefix'=>"admin", 'middleware'=>"auth"], function(){
-   Route::get('/', "AdminController@index")->name('admin'); 
+Route::group(['prefix' => "admin", 'middleware' => "auth"], function () {
+    Route::get('/', "AdminController@index")->name('admin');
 
-   Route::group(['prefix'=>"noticias", 'middleware'=>"auth"], function(){
-      Route::get('/', "NoticiaController@index");
-      Route::get('/create', "NoticiaController@create");
-      Route::post('/store', "NoticiaController@store");
-      Route::get('/edit/{id_noticia}', "NoticiaController@edit");
-      Route::put('/update/{id_noticia}', "NoticiaController@update");
-   });
+    Route::group(['prefix' => "noticias", 'middleware' => "auth"], function () {
+        Route::get('/', "NoticiaController@index");
+        Route::get('/create', "NoticiaController@create");
+        Route::post('/store', "NoticiaController@store");
+        Route::get('/edit/{id_noticia}', "NoticiaController@edit");
+        Route::put('/update/{id_noticia}', "NoticiaController@update");
+    });
 
-   Route::group(['prefix'=>"publicidades", 'middleware'=>"auth"], function(){
-      Route::get('/', "PostPublicitarioController@index");
-      Route::get('/create', "PostPublicitarioController@create");
-      Route::post('/store', "PostPublicitarioController@store");
-      Route::get('/edit/{id_noticia}', "PostPublicitarioController@edit");
-      Route::put('/update/{id_noticia}', "PostPublicitarioController@update");
-   });
+    Route::group(['prefix' => "publicidades", 'middleware' => "auth"], function () {
+        Route::get('/', "PostPublicitarioController@index");
+        Route::get('/create', "PostPublicitarioController@create");
+        Route::post('/store', "PostPublicitarioController@store");
+        Route::get('/edit/{id_noticia}', "PostPublicitarioController@edit");
+        Route::put('/update/{id_noticia}', "PostPublicitarioController@update");
+    });
 
-   Route::group(['prefix'=>"usuario", 'middleware'=>"auth"], function(){
-      Route::get('/edit', "UserController@edit_profile");
-      Route::post('/update', "UserController@update_profile");
-   });
+    Route::group(['prefix' => "usuario", 'middleware' => "auth"], function () {
+        Route::get('/edit', "UserController@edit_profile");
+        Route::post('/update', "UserController@update_profile");
+    });
+});
+
+Route::group(['prefix' => "tv"], function () {
+    Route::get('/', "TvController@index");
+    Route::get('/view/{id}', "TvController@view");
 });

@@ -81,9 +81,9 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     //////////// by www.wpfreeware.com======================-->
 
     <!-- Preloader -->
-    <div id="preloader">
+    <!--<div id="preloader">
         <div id="status">&nbsp;</div>
-    </div>
+    </div>-->
     <!-- End Preloader -->
 
     <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
@@ -98,7 +98,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
                             <ul class="top_nav">
                                 <li><a href="/">Principal</a></li>
                                 <li><a href="/sobre">Sobre</a></li>
-                                <li><a href="/login">Login</a></li>
+                                <li><a href="/tv">TV Online</a></li>
                             </ul>
                         </div>
                         <div class="header_top_right">
@@ -381,14 +381,18 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRLE4LZB7D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRLE4LZB7D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-YRLE4LZB7D');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YRLE4LZB7D');
+
+    </script>
 
 </body>
 
