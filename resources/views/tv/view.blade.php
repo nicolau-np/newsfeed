@@ -9,7 +9,7 @@
                 <video id='hls-example' class="video-js vjs-default-skin" style="width:100%; height:30em;" controls>
                     <source type="application/x-mpegURL" src="{{ $getCanal->link }}">
                 </video>
-<br/><br/>
+                <br /><br />
             </div>
         </div>
     </section>
