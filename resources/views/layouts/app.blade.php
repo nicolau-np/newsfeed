@@ -58,10 +58,10 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     <!-- <link href="theme.css" rel="stylesheet"> -->
     <!-- main site css file -->
     <link href="{{ asset('assets/style.css') }}" rel="stylesheet">
-    @if ($type == 'showtv')
-        <!-- CSS  -->
-        <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
-    @endif
+
+    <!-- CSS  -->
+    <!-- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">-->
+
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
