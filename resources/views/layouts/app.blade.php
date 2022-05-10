@@ -60,7 +60,7 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     <link href="{{ asset('assets/style.css') }}" rel="stylesheet">
 
     <!-- CSS  -->
-    <!-- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">-->
+    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
 
 
@@ -85,9 +85,9 @@ $last_pubCategory = ControllerStatics::getLasPubCategory($getCategoria->id);
     //////////// by www.wpfreeware.com======================-->
 
     <!-- Preloader -->
-    <!--<div id="preloader">
+    <div id="preloader">
         <div id="status">&nbsp;</div>
-    </div>-->
+    </div>
     <!-- End Preloader -->
 
     <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
