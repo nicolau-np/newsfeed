@@ -41,6 +41,14 @@ Route::group(['prefix' => "admin", 'middleware' => "auth"], function () {
         Route::put('/update/{id_noticia}', "PostPublicitarioController@update");
     });
 
+    Route::group(['prefix' => "tvonline", 'middleware' => "auth"], function () {
+        Route::get('/', "TvOnlineController@index");
+        Route::get('/create', "TvOnlineController@create");
+        Route::post('/store', "TvOnlineController@store");
+        Route::get('/edit/{id_noticia}', "TvOnlineController@edit");
+        Route::put('/update/{id_noticia}', "TvOnlineController@update");
+    });
+
     Route::group(['prefix' => "usuario", 'middleware' => "auth"], function () {
         Route::get('/edit', "UserController@edit_profile");
         Route::post('/update', "UserController@update_profile");
