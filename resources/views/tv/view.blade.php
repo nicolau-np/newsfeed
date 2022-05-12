@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <h3>{{ $getCanal->canal }}</h3>
 
-                <video id='hls-example' class="video-js vjs-default-skin" style="width:100%; height:30em;" controls>
+                <video id='hls-example' class="video-js vjs-default-skin" style="width:100%;" controls>
                     <source type="application/x-mpegURL" src="{{ $getCanal->link }}">
                 </video>
                 <br /><br />
